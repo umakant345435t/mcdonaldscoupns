@@ -86,16 +86,23 @@ export default function Home({
             <div className="flex flex-wrap gap-3 pt-2">
               <button
                 onClick={() => setPath('/gutscheine/')}
-                className="px-6 py-3.5 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-2xl shadow-lg shadow-yellow-500/20 text-sm cursor-pointer transition-all hover:scale-102"
+                className="px-6 py-3.5 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-2xl shadow-lg shadow-yellow-500/20 text-sm cursor-pointer transition-all hover:scale-102 font-sans"
               >
                 Gutscheine ansehen 🎟️
               </button>
               <button
                 onClick={() => setPath('/app-gutscheine/')}
-                className="px-6 py-3.5 bg-transparent hover:bg-red-700/80 text-white font-bold rounded-2xl border-2 border-white/20 hover:border-white text-sm cursor-pointer transition-all"
+                className="px-6 py-3.5 bg-transparent hover:bg-red-700/80 text-white font-bold rounded-2xl border-2 border-white/20 hover:border-white text-sm cursor-pointer transition-all font-sans"
               >
                 App-Angebote entdecken 📱
               </button>
+              <a
+                href="/mcdonalds_gutscheine_juni_2026.pdf"
+                download="mcdonalds_gutscheine_juni_2026.pdf"
+                className="px-6 py-3.5 bg-white/15 hover:bg-white/25 text-white font-black rounded-2xl text-sm cursor-pointer transition-all hover:scale-102 flex items-center space-x-2 font-sans"
+              >
+                <span>PDF Coupon-Heft herunterladen 📥</span>
+              </a>
             </div>
 
             {/* Quick value metric row */}
@@ -123,6 +130,31 @@ export default function Home({
         
         {/* Main Content Column */}
         <div className="lg:col-span-8 space-y-12">
+
+          {/* PDF Coupon Heft Download Banner */}
+          <div className="bg-gradient-to-r from-red-650 to-amber-600 rounded-3xl p-6 md:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
+            <div className="space-y-3 z-10">
+              <span className="inline-flex items-center space-x-1.5 bg-yellow-400 text-gray-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
+                Aktuell: Juni 2026
+              </span>
+              <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight">
+                Offizielles McDonald's Coupon-Heft als PDF
+              </h3>
+              <p className="text-xs md:text-sm text-red-50 max-w-xl leading-relaxed font-medium">
+                Lade dir hier das komplette gedruckte Coupon-Heft mit allen 20+ Rabattcoupons (Doppelpacks, Nuggets, Dessert & Snacks) als druckoptimiertes PDF herunter oder nutze die PLU-Codes direkt an der Kasse!
+              </p>
+            </div>
+            <div className="shrink-0 z-10 w-full md:w-auto">
+              <a
+                href="/mcdonalds_gutscheine_juni_2026.pdf"
+                download="mcdonalds_gutscheine_juni_2026.pdf"
+                className="block w-full md:w-auto text-center px-6 py-4 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-2xl shadow-lg shadow-yellow-500/20 text-sm cursor-pointer transition-all hover:scale-102 font-sans"
+              >
+                📥 PDF herunterladen
+              </a>
+            </div>
+          </div>
           
           {/* Popular Coupons Grid section */}
           <div>
