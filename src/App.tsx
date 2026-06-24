@@ -7,8 +7,10 @@ import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import Blog from './pages/Blog';
 import Legal from './pages/Legal';
+import NotFound from './pages/NotFound';
 import { Coupon } from './types';
 import { McDonaldCoupons } from './data/coupons';
+import { BlogPosts } from './data/blog';
 
 export default function App() {
   // Sync router state using path location
@@ -155,6 +157,47 @@ export default function App() {
 
   // Determine active view to render
   const renderPage = () => {
+    // Validate routing first
+    const isPathValid = (path: string): boolean => {
+      const normalized = path.endsWith('/') ? path : `${path}/`;
+      
+      const staticValidPaths = [
+        '/',
+        '/index.html',
+        '/gutscheine/',
+        '/app-gutscheine/',
+        '/happy-meal-angebote/',
+        '/fruehstueck-angebote/',
+        '/burger-angebote/',
+        '/mccafe-angebote/',
+        '/angebote/',
+        '/blog/',
+        '/ueber-uns/',
+        '/kontakt/',
+        '/datenschutz/',
+        '/impressum/',
+        '/cookies/',
+        '/haftungsausschluss/',
+        '/nutzungsbedingungen/'
+      ];
+
+      if (staticValidPaths.includes(normalized) || staticValidPaths.includes(path)) {
+        return true;
+      }
+
+      // Check dynamic blog posts
+      if (path.startsWith('/blog/')) {
+        const slug = path.replace('/blog/', '').replace(/\/$/, '');
+        return BlogPosts.some(post => post.slug === slug);
+      }
+
+      return false;
+    };
+
+    if (!isPathValid(currentPath)) {
+      return <NotFound setPath={setPath} />;
+    }
+
     // Check if we are viewing a search query
     if (searchQuery.trim().length > 0) {
       const searchLower = searchQuery.toLowerCase();
@@ -202,7 +245,7 @@ export default function App() {
     }
 
     // Standard Router selection
-    if (currentPath === '/') {
+    if (currentPath === '/' || currentPath === '/index.html') {
       return (
         <Home
           setPath={setPath}
