@@ -8,6 +8,7 @@ import CategoryPage from './pages/CategoryPage';
 import Blog from './pages/Blog';
 import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
+import PdfDownloads from './pages/PdfDownloads';
 import { Coupon } from './types';
 import { McDonaldCoupons } from './data/coupons';
 import { BlogPosts } from './data/blog';
@@ -178,7 +179,8 @@ export default function App() {
         '/impressum/',
         '/cookies/',
         '/haftungsausschluss/',
-        '/nutzungsbedingungen/'
+        '/nutzungsbedingungen/',
+        '/gutscheine-pdf-download/'
       ];
 
       if (staticValidPaths.includes(normalized) || staticValidPaths.includes(path)) {
@@ -304,6 +306,10 @@ export default function App() {
     }
     if (currentPath === '/nutzungsbedingungen/') {
       return <Legal pageType="nutzungsbedingungen" setPath={setPath} />;
+    }
+
+    if (currentPath === '/gutscheine-pdf-download/') {
+      return <PdfDownloads setPath={setPath} />;
     }
 
     // Catch-all SPA fallback: Home Page

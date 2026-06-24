@@ -3,7 +3,7 @@ import { Coupon, BlogPost } from '../types';
 import CouponCard from '../components/CouponCard';
 import { McDonaldCoupons } from '../data/coupons';
 import { BlogPosts, FAQS } from '../data/blog';
-import { Sparkles, MessageCircle, HelpCircle, ArrowRight, BookOpen, Smartphone, ShieldCheck, Star } from 'lucide-react';
+import { Sparkles, MessageCircle, HelpCircle, ArrowRight, BookOpen, Smartphone, ShieldCheck, Star, FileText, Download } from 'lucide-react';
 import SchemaMarkup from '../components/SchemaMarkup';
 
 interface HomeProps {
@@ -311,6 +311,77 @@ export default function Home({
 
         {/* Sidebar Information Column */}
         <aside className="lg:col-span-4 space-y-8">
+          
+          {/* PDF Downloads List Sidebar Widget */}
+          <div className="bg-white rounded-2xl border border-gray-150 p-6 space-y-5 relative overflow-hidden text-xs shadow-xs">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-red-650"></div>
+            <div className="space-y-1">
+              <span className="inline-flex items-center space-x-1 bg-yellow-400 text-gray-950 text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+                Gutschein-Hefte PDF
+              </span>
+              <h3 className="font-black text-gray-900 text-sm tracking-tight flex items-center space-x-1.5">
+                <FileText className="h-4.5 w-4.5 text-red-600" />
+                <span>PDF Coupon-Downloads</span>
+              </h3>
+              <p className="text-gray-500 text-[11px] leading-relaxed">
+                Offline sparen: Lade dir die aktuellen deutschen Sparcoupons im praktischen PDF-Format herunter!
+              </p>
+            </div>
+
+            {/* List of PDFs */}
+            <div className="space-y-3">
+              {[
+                {
+                  name: "Coupon-Heft (Komplett)",
+                  size: "1.2 MB",
+                  desc: "Alle 20+ aktuellen Gutscheine",
+                  file: "mcdonalds_gutscheine_juni_2026_komplett.pdf"
+                },
+                {
+                  name: "Doppelpack & Burger Deals",
+                  size: "650 KB",
+                  desc: "Zweimal sparen bei Burgern",
+                  file: "mcdonalds_gutscheine_doppelpack_deals.pdf"
+                },
+                {
+                  name: "Familien & Happy Meal®",
+                  size: "380 KB",
+                  desc: "Kombimenüs für Groß & Klein",
+                  file: "mcdonalds_gutscheine_familien_deals.pdf"
+                },
+                {
+                  name: "Snacks & Dessert Coupons",
+                  size: "480 KB",
+                  desc: "Chili Cheese, Wings, Flurry",
+                  file: "mcdonalds_gutscheine_snacks_desserts.pdf"
+                }
+              ].map((pdf, index) => (
+                <div key={index} className="p-3 rounded-xl bg-gray-50/70 border border-gray-150 hover:border-red-200 hover:bg-red-50/5 transition-all flex items-center justify-between gap-3 group">
+                  <div className="space-y-0.5">
+                    <p className="font-bold text-gray-800 text-[11px] leading-tight group-hover:text-red-600 transition-colors">{pdf.name}</p>
+                    <p className="text-[10px] text-gray-400 leading-none">{pdf.desc} • <span className="font-mono">{pdf.size}</span></p>
+                  </div>
+                  <a
+                    href="/mcdonalds_gutscheine_juni_2026.pdf"
+                    download={pdf.file}
+                    className="p-1.5 bg-white hover:bg-yellow-400 border border-gray-200 text-gray-700 hover:text-gray-950 rounded-lg hover:border-yellow-400 cursor-pointer transition-colors shadow-xs"
+                    title="PDF Herunterladen"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            {/* Link to detail page with print-guide & details */}
+            <button
+              onClick={() => setPath('/gutscheine-pdf-download/')}
+              className="w-full py-3 bg-gray-900 hover:bg-gray-800 text-white text-center font-bold text-xs rounded-xl cursor-pointer transition-colors flex items-center justify-center space-x-1"
+            >
+              <span>Druckanleitung & Details öffnen</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </div>
           
           {/* Unofficial Disclaimer Box (SEO Topical Authority) */}
           <div className="bg-white rounded-2xl border border-gray-100 p-6 space-y-4 relative overflow-hidden text-xs">
