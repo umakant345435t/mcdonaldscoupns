@@ -111,7 +111,7 @@ export default function CategoryPage({ categorySlug, onAddToCalc, setPath }: Cat
         "@type": "ListItem",
         "position": 2,
         "name": pageMeta.title,
-        "item": `${window.location.origin}/#/${categorySlug}/`
+        "item": `${window.location.origin}/${categorySlug}/`
       }
     ]
   };

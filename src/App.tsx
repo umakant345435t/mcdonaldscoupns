@@ -11,10 +11,10 @@ import { Coupon } from './types';
 import { McDonaldCoupons } from './data/coupons';
 
 export default function App() {
-  // Sync router state using Hash location
+  // Sync router state using path location
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    const hash = window.location.hash.slice(1); // strip "#"
-    return hash || '/';
+    const path = window.location.pathname;
+    return path || '/';
   });
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,22 +34,28 @@ export default function App() {
     localStorage.setItem('spar-rechner-items', JSON.stringify(calcItems));
   }, [calcItems]);
 
-  // Listen to hash changes in browser to support native Back/Forward buttons and deep links!
+  // Listen to popstate changes in browser to support native Back/Forward buttons and deep links!
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1);
-      setCurrentPath(hash || '/');
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname || '/');
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  // Update hash when path changed programmatically
+  // Update path when path changed programmatically
   const setPath = (path: string) => {
     // Clear search query on page change for neat UX
     setSearchQuery('');
-    window.location.hash = path;
-    setCurrentPath(path);
+    
+    // Normalize path to always start with /
+    let targetPath = path;
+    if (!targetPath.startsWith('/')) {
+      targetPath = '/' + targetPath;
+    }
+    
+    window.history.pushState(null, '', targetPath);
+    setCurrentPath(targetPath);
   };
 
   // Dynamic SEO Page Meta title write
