@@ -66,27 +66,19 @@ export const BlogPosts: BlogPost[] = [
 
 export const FAQS = [
   {
-    question: "Woher bekomme ich aktuelle McDonald's Gutscheine?",
-    answer: "Aktuelle Gutscheine erhältst du entweder über die gedruckten Coupon-Hefte, die mehrmals im Jahr bundesweit an Haushalte verteilt werden, direkt in der offiziellen McDonald's Smartphone-App oder auf zuverlässigen Portalen wie mcdonaldsgutscheine.de, wo wir alle aktuellen Aktionen, Angebote und PLU-Codes sammeln."
+    question: "Wo sind die aktuellen McDonald's-Gutscheine?",
+    answer: "Die neuesten Gutscheine erhalten Sie in gedruckten Couponheften, die ein- bis mehrmals jährlich an Haushalte im ganzen Land verteilt werden, in der offiziellen McDonald's Smartphone-App oder auf zuverlässigen Portalen wie mcdonaldsgutscheine.de, wo wir aktuelle Aktionen, Angebote und PLU-Codes sammeln."
   },
   {
-    question: "Was genau ist ein PLU-Code bei McDonald's?",
-    answer: "Ein PLU-Code (Price Lookup Code) ist eine kurze Nummer (z. B. PLU 482), die dem Kassensystem anzeigt, welcher Rabatt für ein Produkt abgezogen werden soll. Du kannst diesen Code einfach an der Kasse oder am McDrive-Schalter dem Mitarbeiter ansagen oder manuell am Bestell-Kiosk eingeben."
+    question: "Was ist der PLU-Code bei McDonald's?",
+    answer: "Ein PLU-Code (Price Lookup Code) is eine kurze Nummer (z.B. PLU 482), die vom Kassensystem verwendet wird, um den zu gewährenden Rabatt bei einem McDonald's-Produkt zu bestimmen. Sie können den Code dem McDonald's-Mitarbeiter an der Kasse oder im McDrive oder beim Bestellkiosk mitteilen."
   },
   {
     question: "Sind die Gutscheine in ganz Deutschland gültig?",
-    answer: "Die meisten nationalen Gutscheinaktionen gelten in allen teilnehmenden McDonald's-Filialen in Deutschland. Einige Lizenznehmer (Franchisenehmer) behalten sich jedoch das Recht vor, nicht an allen Rabattaktionen teilzunehmen. Am sichersten fährst du bei Filialen in Großstädten oder direkt an Autobahnen."
+    answer: "Die meisten landesweiten Gutscheinaktionen sind in allen teilnehmenden McDonald's-Restaurants in Deutschland gültig. Einige Lizenznehmer (Franchise-Nehmer) behalten sich das Recht vor, an ihren Restaurants nicht an allen Rabattaktionen teilzunehmen. Der sicherste Standort ist ein Restaurant in einer Großstadt oder direkt an der Autobahn."
   },
   {
-    question: "Gibt es auch dauerhafte Gutscheine oder Rabatte?",
-    answer: "Ja, in der McDonald's App gibt es ein dauerhaftes Treueprogramm, bei dem du Punkte sammeln und gegen Gratis-Prämien eintauschen kannst. Außerdem erhältst du durch das Ausfüllen des Gäste-Feedbacks auf mcdonalds-evaluiert.de bei fast jedem Besuch einen Universalgutschein für ein Gratis-Heißgetränk, Softdrink oder eine kleine Pommes."
-  },
-  {
-    question: "Kann man mehrere Gutscheine gleichzeitig einlösen?",
-    answer: "Am Bestellkiosk und an der Kasse kannst du pro Bestellvorgang normalerweise mehrere unterschiedliche Gutscheine (z.B. ein Burger-Sparcoupon und ein McCafé-Kuchencoupon) einlösen. Das Kombinieren von mehreren exklusiven App-Coupons kann jedoch softwareseitig auf einen Gutschein pro Bestellung beschränkt sein."
-  },
-  {
-    question: "Kann ich Gutscheine mit dem Lieferservice McDelivery nutzen?",
-    answer: "Vorteilscoupons sind in der Regel für den Verzehr vor Ort, zum Mitnehmen im Restaurant oder am McDrive gültig. Bei einer Lieferung von McDelivery über externe Partner wie Lieferando oder Wolt gelten die regulären Preise und die hier gelisteten PLU-Kassencoupons können meist nicht eingelöst werden."
+    question: "Gibt es auch dauerhaft gültige Gutscheine oder Rabatte?",
+    answer: "Ja, in der McDonald's-App gibt es ein dauerhaftes Treueprogramm, bei dem Sie Punkte sammeln können, die gegen kostenlose Belohnungen eingelöst werden können. Außerdem erhalten Sie bei der Abgabe des Gästefeedbacks auf mcdonalds-evaluiert.de fast jedes Mal einen universellen Gutschein für ein kostenloses Heißgetränk, Softdrink oder kleine Pommes."
   }
 ];

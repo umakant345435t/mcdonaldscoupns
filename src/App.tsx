@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
+import CouponCard from './components/CouponCard';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import Blog from './pages/Blog';
@@ -180,22 +181,11 @@ export default function App() {
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {searchMatches.map((coupon) => (
-                    <div key={coupon.id} className="relative">
-                      <button
-                        onClick={() => handleAddToCalc(coupon)}
-                        className="absolute right-4 top-4 z-10 p-1 bg-yellow-400 text-gray-900 rounded-lg text-xs font-bold shrink-0 hover:bg-yellow-500"
-                      >
-                        + Verrechnen
-                      </button>
-                      <Home
-                        setPath={setPath}
-                        onAddToCalc={handleAddToCalc}
-                        calcItems={calcItems}
-                        onRemoveFromCalc={handleRemoveFromCalc}
-                        onUpdateCalcQty={handleUpdateCalcQty}
-                        onClearCalc={handleClearCalc}
-                      />
-                    </div>
+                    <CouponCard
+                      key={coupon.id}
+                      coupon={coupon}
+                      onAddToCalc={handleAddToCalc}
+                    />
                   ))}
                 </div>
               )}

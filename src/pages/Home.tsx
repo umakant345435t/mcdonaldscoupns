@@ -1,7 +1,6 @@
 import React from 'react';
 import { Coupon, BlogPost } from '../types';
 import CouponCard from '../components/CouponCard';
-import SavingsCalculator from '../components/SavingsCalculator';
 import { McDonaldCoupons } from '../data/coupons';
 import { BlogPosts, FAQS } from '../data/blog';
 import { Sparkles, MessageCircle, HelpCircle, ArrowRight, BookOpen, Smartphone, ShieldCheck, Star } from 'lucide-react';
@@ -69,10 +68,10 @@ export default function Home({
         <div className="absolute top-0 right-0 w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-red-800/40 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-7xl mx-auto">
           
           {/* Pitch Tagline */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-950 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider animate-pulse">
               <Sparkles className="h-3 w-3" />
               <span>Geringere Preise Gelistet 2026</span>
@@ -80,11 +79,11 @@ export default function Home({
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
               McDonald's Gutscheine & Coupons für <span className="text-yellow-400">Deutschland</span>
             </h1>
-            <p className="text-sm md:text-base text-red-50 leading-relaxed max-w-2xl">
-              Finde alle aktuellen Rabattcoupons, wöchentliche App-Vorteile und clevere Bestell-Tricks des inoffiziellen McDonald’s Sparportals. Unser interaktiver Rechner stellt den Belegwert für dich zusammen, damit du maximal sparen kannst.
+            <p className="text-sm md:text-base text-red-50 leading-relaxed">
+              Finde alle aktuellen Rabattcoupons, wöchentliche App-Vorteile und clevere Bestell-Tricks des inoffiziellen McDonald’s Sparportals für maximales Sparen im Restaurant, am Terminal oder im McDrive.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 pt-2">
               <button
                 onClick={() => setPath('/gutscheine/')}
                 className="px-6 py-3.5 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-2xl shadow-lg shadow-yellow-500/20 text-sm cursor-pointer transition-all hover:scale-102"
@@ -100,7 +99,7 @@ export default function Home({
             </div>
 
             {/* Quick value metric row */}
-            <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/10 text-center max-w-lg">
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 text-center max-w-lg">
               <div>
                 <p className="text-2xl font-black text-yellow-400">100%</p>
                 <p className="text-[10px] text-red-100 uppercase tracking-wider font-bold">Unabhängig</p>
@@ -114,16 +113,6 @@ export default function Home({
                 <p className="text-[10px] text-red-100 uppercase tracking-wider font-bold">Werbefreie Tipps</p>
               </div>
             </div>
-          </div>
-
-          {/* Interactive Calculator Preview block */}
-          <div className="lg:col-span-5 h-full">
-            <SavingsCalculator
-              items={calcItems}
-              onRemove={onRemoveFromCalc}
-              onUpdateQty={onUpdateCalcQty}
-              onClear={onClearCalc}
-            />
           </div>
 
         </div>
@@ -268,8 +257,8 @@ export default function Home({
           <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 space-y-6">
             <div className="text-center">
               <HelpCircle className="h-8 w-8 text-red-500 mx-auto mb-2" />
-              <h2 className="text-lg md:text-xl font-black text-gray-900 tracking-tight">FAQ – Antworten auf die wichtigsten Fragen</h2>
-              <p className="text-xs text-gray-500 max-w-lg mx-auto mt-1">Hier findest du verlässliche Antworten über Einlösebedingungen und Gültigkeiten im Fast-Food-Restaurant.</p>
+              <h2 className="text-lg md:text-xl font-black text-gray-900 tracking-tight uppercase">FAQ - WIR BEANTWORTEN DIE WICHTIGSTEN FRAGEN</h2>
+              <p className="text-xs text-gray-500 max-w-lg mx-auto mt-1">Hier finden Sie vernünftige Antworten auf Fragen bezüglich der Einlösebedingungen und der Gültigkeit im Schnellrestaurant.</p>
             </div>
             <div className="division-y divide-gray-100 space-y-4">
               {FAQS.slice(0, 4).map((faq, index) => (
