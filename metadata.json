@@ -1,0 +1,6 @@
+{
+  "name": "McDonalds Gutscheine Sparportal",
+  "description": "Vollständiges, inoffizielles McDonald's Sparportal mit aktuellen Gutscheinen, App-Coupons, Rechner, Blog und Leitfäden zum Sparen in Deutschland.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
