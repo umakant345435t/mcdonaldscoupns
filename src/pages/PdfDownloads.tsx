@@ -268,6 +268,17 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
           </div>
         </div>
 
+        {/* Global Internal Backlink */}
+        <div className="bg-white rounded-3xl border border-gray-150/75 p-6 mt-8 text-xs text-gray-600 leading-relaxed space-y-2">
+          <p className="font-bold text-gray-900">📍 Nützliche Links &amp; Empfehlungen</p>
+          <p>
+            Möchtest du alle aktiven Online-Coupons, Kassen-PLU-Codes und exklusiven Rabatte auf einen Blick sehen? Besuche unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a> in Deutschland.
+          </p>
+          <p className="border-t border-gray-100 pt-2 text-gray-500">
+            Zusätzlich zum offiziellen Coupon-Bogen kannst du auch die Angebote und Spezialitäten anderer Restaurant-Ketten vergleichen im aktuellen <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold underline text-red-650 hover:text-red-700">Burger King Menu</a>.
+          </p>
+        </div>
+
       </div>
     </div>
   );

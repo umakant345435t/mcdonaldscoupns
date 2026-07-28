@@ -227,6 +227,19 @@ export default function Legal({ pageType, setPath }: LegalProps) {
             </div>
           )}
 
+          {/* Global Backlink & Navigation Footer */}
+          <div className="pt-6 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-3">
+            <p>
+              Zurück zur Startseite für tagesaktuelle <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold text-red-650 hover:underline">McDonald Gutscheine</a> und Sparangebote in Deutschland.
+            </p>
+            <button
+              onClick={() => setPath('/')}
+              className="px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white font-bold rounded-xl text-xs cursor-pointer transition-colors"
+            >
+              Startseite öffnen
+            </button>
+          </div>
+
         </div>
       </div>
     </div>

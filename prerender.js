@@ -52,8 +52,8 @@ blogSlugs.forEach(slug => {
 // Dynamic metadata database for physical pages
 const pageMeta = {
   '/': {
-    title: "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote",
-    desc: "Finde aktuelle McDonald's Gutscheine, Coupons und Angebote. Spare bei Burgern, Menüs, McFlurry und mehr."
+    title: "McDonald Gutscheine 2026 – Aktuelle Coupons & Angebote",
+    desc: "Finde aktuelle McDonald Gutscheine, Coupons und Angebote. Spare bei Burgern, Menüs, McFlurry und mehr."
   },
   '/gutscheine/': {
     title: "McDonald's Gutscheine 2026 – Alle Coupons & Sparcodes",

@@ -77,7 +77,7 @@ export default function Home({
               <span>Geringere Preise Gelistet 2026</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-              McDonald's Gutscheine & Coupons für <span className="text-yellow-400">Deutschland</span>
+              McDonald Gutscheine & Coupons für <span className="text-yellow-400">Deutschland</span>
             </h1>
             <p className="text-sm md:text-base text-red-50 leading-relaxed">
               Finde alle aktuellen Rabattcoupons, wöchentliche App-Vorteile und clevere Bestell-Tricks des inoffiziellen McDonald’s Sparportals für maximales Sparen im Restaurant, am Terminal oder im McDrive.
@@ -437,6 +437,18 @@ export default function Home({
                 <span>🇸🇪 Burger King® Menu &amp; Prices (Sweden)</span>
                 <span className="text-gray-400">→</span>
               </a>
+              <div className="p-3.5 rounded-xl border border-amber-200 bg-amber-50/40 space-y-2 text-[11px] text-gray-700 leading-relaxed">
+                <p className="font-bold text-gray-900">👑 Flame-Grilled Fast-Food Empfehlungen</p>
+                <p>
+                  Vergleiche beliebte Flame-Grilled Burger, herzhafte King Snacks und tagesaktuelle Kombinationen direkt in der digitalen Übersicht für das beliebte <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold text-red-650 hover:underline">Burger King Menu</a>.
+                </p>
+              </div>
+              <div className="p-3.5 rounded-xl border border-red-100 bg-red-50/30 space-y-2 text-[11px] text-gray-700 leading-relaxed">
+                <p className="font-bold text-gray-900">🍱 Empfehlung: Japanische Bento Fast-Food Kultur</p>
+                <p>
+                  Wer neben deutschen Schnellrestaurants auch die faszinierende Welt fernöstlicher Fast-Food-Kultur entdecken möchte, findet im japanischen Bento-Spezialisten eine fantastische kulinarische Inspiration. Werfe einen Blick auf die beliebtesten Gerichte und aktuellen Spar-Menüs der bekanntesten Bento-Kette Japans über den umfassenden Speisekarten-Guide für <a href="https://hottomottomenu.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-red-650 hover:underline">ほっともっと メニュー</a>.
+                </p>
+              </div>
             </div>
           </div>
 

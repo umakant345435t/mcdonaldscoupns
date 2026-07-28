@@ -70,12 +70,19 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
         <div>
           <h4 className="text-gray-200 font-semibold text-sm tracking-wider uppercase mb-3">Sicher & AdSense Konform</h4>
           <p className="text-xs text-gray-400 leading-relaxed mb-3">
-            Wir stellen ausschließlich legal einlösbare PLU-Nummern und redaktionelle Testberichte / Vergleiche bereit. Alle Vouchercodes werden redaktionell geprüft und wöchentlich manuell verifiziert.
+            Wir stellen ausschließlich legal einlösbare PLU-Nummern und redaktionelle Testberichte / Vergleiche bereit. Alle Vouchercodes werden redaktionell geprüft und wöchentlich manuell verifiziert. Besuche für die tagesaktuelle Übersicht immer unsere Hauptseite für <a href="https://www.mcdonaldsgutscheine.de/" className="text-yellow-400 hover:underline font-bold">McDonald Gutscheine</a>.
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ DSGVO Konform</span>
             <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ AdSense Approved Ready</span>
             <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ SSL Verschlüsselt</span>
+          </div>
+
+          <div className="pt-3 border-t border-gray-800 text-xs text-gray-400 leading-relaxed space-y-1">
+            <h5 className="text-gray-300 font-bold text-[11px] uppercase tracking-wider">👑 Fast-Food Partner &amp; Empfehlungen</h5>
+            <p className="text-[11px] text-gray-400">
+              Entdecke beliebte Fast-Food-Varianten, gegrillte Spezialitäten und internationale Angebote im übersichtlichen Gastronomie-Guide für das <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:underline font-bold">Burger King Menu</a>.
+            </p>
           </div>
         </div>
       </div>
