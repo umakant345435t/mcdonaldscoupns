@@ -38,10 +38,9 @@ const routes = [
 
 // All dynamic blog slugs
 const blogSlugs = [
-  'wie-funktionieren-mcdonalds-gutscheine',
-  'lohnt-sich-die-mcdonalds-app',
-  'die-besten-spar-tipps-mcdonalds',
-  'mcdonalds-treueprogramm-erklaert'
+  'mcdonalds-treueprogramm-erklaert',
+  'japanisches-fast-food-bento-guide',
+  'burger-king-menue-preise-kalorien-angebote'
 ];
 
 // Add blog subroutes
@@ -119,21 +118,17 @@ const pageMeta = {
     title: "McDonald's Gutscheine PDF-Download & Druck-Center",
     desc: "Lade das offizielle McDonald's Coupon-Heft für Juni 2026 als druckoptimiertes PDF herunter und spare offline!"
   },
-  '/blog/wie-funktionieren-mcdonalds-gutscheine/': {
-    title: "Wie funktionieren McDonald’s Gutscheine? (Anleitung & PLU-Erklärung)",
-    desc: "Du stehst im Restaurant, am Terminal oder am McDrive und weißt nicht, wie du deinen Coupon einlöst? Hier ist die vollständige Anleitung zu PLU-Codes."
-  },
-  '/blog/lohnt-sich-die-mcdonalds-app/': {
-    title: "Lohnt sich die McDonald’s App wirklich? Unser ehrlicher Testbericht",
-    desc: "Fast jede Restaurantkette hat eine eigene App. Doch wie gut sind die Angebote in der McDonald’s App wirklich? Wir haben das Treuepunkte-System getestet."
-  },
-  '/blog/die-besten-spar-tipps-mcdonalds/': {
-    title: "Die 5 besten Geheim-Tipps zum Sparen bei McDonald’s",
-    desc: "Wer sagt, dass man nur mit regulären Vouchern Geld sparen kann? Mit diesen cleveren Tricks und Kombinationen holst du das absolute Maximum heraus."
-  },
   '/blog/mcdonalds-treueprogramm-erklaert/': {
     title: "McDonald’s Treueprogramm erklärt: Prämien & MyMcDonalds Points",
     desc: "Punkte sammeln wie die Weltmeister und umsonst Burger essen? Erfahre ganz genau, wie das MyMcDonald’s Prämienprogramm abläuft."
+  },
+  '/blog/japanisches-fast-food-bento-guide/': {
+    title: "Japanisches Fast Food wählen – Wie man schnell das passende Bento findet",
+    desc: "Erfahre, wie du auf Reisen in Japan gesundes und günstiges Fast Food findest und worauf du bei Bento-Boxen, Nährwertangaben und Allergenen achten solltest."
+  },
+  '/blog/burger-king-menue-preise-kalorien-angebote/': {
+    title: "Burger King Menü 2026 – Preise, Kalorien und aktuelle Angebote einfach vergleichen",
+    desc: "Erfahre alles über aktuelle Burger King Preise, Kalorienwerte, Nährwertangaben und beliebte Menü-Angebote auf einen Blick."
   }
 };
 

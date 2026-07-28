@@ -113,20 +113,22 @@ export default function Blog({ currentPath, setPath }: BlogProps) {
             {/* Paragraphs iterating content */}
             <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-5 pt-4">
               {activeArticle.content.map((para, i) => (
-                <p key={i}>{para}</p>
+                <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
               ))}
             </div>
 
             {/* Interne Verlinkung & SEO Backlinks */}
-            <div className="bg-red-50/40 rounded-2xl border border-red-100 p-5 mt-8 space-y-3 text-xs text-gray-700">
-              <p className="font-bold text-gray-900">🔗 Weiterführende Informationen & Empfehlungen</p>
-              <p className="leading-relaxed">
-                Für alle aktuellen Rabattcodes, exklusiven Coupons und Sparaktionen in Deutschland nutze immer unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a>.
-              </p>
-              <p className="leading-relaxed border-t border-red-100/80 pt-2 text-gray-600">
-                Wer neben McDonald's Rabatten auch Fast-Food-Klassiker anderer bekannter Ketten vergleichen möchte, findet alle aktuellen Preise, Nährwerte und Beilagen im <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold underline text-red-650 hover:text-red-700">Burger King Menu</a>.
-              </p>
-            </div>
+            {activeArticle.slug !== 'japanisches-fast-food-bento-guide' && (
+              <div className="bg-red-50/40 rounded-2xl border border-red-100 p-5 mt-8 space-y-3 text-xs text-gray-700">
+                <p className="font-bold text-gray-900">🔗 Weiterführende Informationen & Empfehlungen</p>
+                <p className="leading-relaxed">
+                  Für alle aktuellen Rabattcodes, exklusiven Coupons und Sparaktionen in Deutschland nutze immer unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a>.
+                </p>
+                <p className="leading-relaxed border-t border-red-100/80 pt-2 text-gray-600">
+                  Wer neben McDonald's Rabatten auch Fast-Food-Klassiker anderer bekannter Ketten vergleichen möchte, findet alle aktuellen Preise, Nährwerte und Beilagen im <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold underline text-red-650 hover:text-red-700">Burger King Menu</a>.
+                </p>
+              </div>
+            )}
 
             {/* Share and Interne Verlinkung footer row */}
             <div className="border-t border-gray-100 pt-8 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">

@@ -419,24 +419,6 @@ export default function Home({
               Entdecke weitere nützliche Portale für aktuelle Gutscheine und Menü-Übersichten anderer bekannter Restaurantketten:
             </p>
             <div className="space-y-2.5">
-              <a 
-                href="https://burgerkinggutscheine.de/" 
-                target="_blank" 
-                rel="noopener" 
-                className="block p-3 rounded-xl border border-gray-150/60 hover:border-amber-400 hover:bg-amber-50/20 text-gray-800 hover:text-amber-600 transition-all font-bold text-[11px] flex items-center justify-between"
-              >
-                <span>👑 Burger King® Gutscheine &amp; Coupons</span>
-                <span className="text-gray-400">→</span>
-              </a>
-              <a 
-                href="https://burgerkingsemenu.com/" 
-                target="_blank" 
-                rel="noopener" 
-                className="block p-3 rounded-xl border border-gray-150/60 hover:border-red-400 hover:bg-red-50/20 text-gray-800 hover:text-red-500 transition-all font-bold text-[11px] flex items-center justify-between"
-              >
-                <span>🇸🇪 Burger King® Menu &amp; Prices (Sweden)</span>
-                <span className="text-gray-400">→</span>
-              </a>
               <div className="p-3.5 rounded-xl border border-amber-200 bg-amber-50/40 space-y-2 text-[11px] text-gray-700 leading-relaxed">
                 <p className="font-bold text-gray-900">👑 Flame-Grilled Fast-Food Empfehlungen</p>
                 <p>
