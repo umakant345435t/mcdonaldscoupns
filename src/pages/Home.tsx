@@ -428,7 +428,7 @@ export default function Home({
               <div className="p-3.5 rounded-xl border border-red-100 bg-red-50/30 space-y-2 text-[11px] text-gray-700 leading-relaxed">
                 <p className="font-bold text-gray-900">🍱 Empfehlung: Japanische Bento Fast-Food Kultur</p>
                 <p>
-                  Wer neben deutschen Schnellrestaurants auch die faszinierende Welt fernöstlicher Fast-Food-Kultur entdecken möchte, findet im japanischen Bento-Spezialisten eine fantastische kulinarische Inspiration. Werfe einen Blick auf die beliebtesten Gerichte und aktuellen Spar-Menüs der bekanntesten Bento-Kette Japans über den umfassenden Speisekarten-Guide für <a href="https://hottomottomenu.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-red-650 hover:underline">ほっともっと メニュー</a>.
+                  Reist du nach Japan und bist unsicher bezüglich Preisen und Speisekarte? Nutze einfach die praktischen Filter auf <a href="https://hottomottomenu.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-red-650 hover:underline">ほっともっと メニュー</a>, um die beliebtesten japanischen Bento-Menüs schnell zu vergleichen.
                 </p>
               </div>
             </div>
