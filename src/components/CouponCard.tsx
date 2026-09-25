@@ -74,9 +74,9 @@ export default function CouponCard({ coupon, onAddToCalc }: CouponCardProps) {
   const isExpiringSoon = () => {
     const today = new Date();
     const expiry = new Date(coupon.expiryDate);
-    const diffTime = Math.abs(expiry.getTime() - today.getTime());
+    const diffTime = expiry.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays <= 12;
+    return diffDays >= 0 && diffDays <= 7;
   };
 
   return (

@@ -9,13 +9,13 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
   const pdfList = [
     {
       id: 'pdf-complete',
-      title: "McDonald's Coupon-Heft Juni 2026 (Komplett)",
+      title: "McDonald's Coupon-Heft 2026 (Komplett)",
       description: "Das gesamte gedruckte Spar-Heft mit allen Coupon-Bögen im handlichen, druckoptimierten DIN-A4-Format. Enthält alle Doppelpacks, Nuggets, Desserts und Snacking-Deals.",
       fileSize: "1.2 MB",
       pages: 2,
       featuredCoupons: ["Doppelpack 226", "Doppelpack 344", "Doppelpack 338", "Klassiker Doppelpack 350", "XL Doppelpack 351", "Doppelpack 318", "20er Nuggets 499", "Snacking 305", "Dessert 209"],
       downloadUrl: "/mcdonalds_gutscheine_juni_2026.pdf",
-      fileName: "mcdonalds_gutscheine_juni_2026_komplett.pdf"
+      fileName: "mcdonalds_gutscheine_2026_komplett.pdf"
     },
     {
       id: 'pdf-doublepacks',
@@ -86,7 +86,7 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
           <div className="max-w-3xl space-y-4 relative z-10">
             <span className="inline-flex items-center space-x-1 bg-yellow-400 text-gray-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-              Aktuell: Juni 2026 PDF
+              Aktuell: Herbst 2026 PDF
             </span>
             <h1 className="text-3xl md:text-4xl font-black tracking-tight leading-tight">
               McDonald's Gutscheine PDF-Download &amp; Druck-Center

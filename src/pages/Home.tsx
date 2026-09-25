@@ -72,9 +72,9 @@ export default function Home({
           
           {/* Pitch Tagline */}
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-950 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider animate-pulse">
+            <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-950 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
               <Sparkles className="h-3 w-3" />
-              <span>Geringere Preise Gelistet 2026</span>
+              <span>Geprüft &amp; Gültig 2026 • Aktuelle PLU-Codes</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
               McDonald Gutscheine & Coupons für <span className="text-yellow-400">Deutschland</span>
@@ -136,7 +136,7 @@ export default function Home({
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
             <div className="space-y-3 z-10">
               <span className="inline-flex items-center space-x-1.5 bg-yellow-400 text-gray-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                Aktuell: Juni 2026
+                Aktuell: Herbst / September 2026
               </span>
               <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight">
                 Offizielles McDonald's Coupon-Heft als PDF
