@@ -45,8 +45,13 @@ export default function Header({ currentPath, setPath, searchQuery, setSearchQue
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-xs">
       {/* Disclaimer Top Bar (Rechtlich & Transparenz) */}
-      <div className="bg-amber-50 text-amber-900 border-b border-amber-100 text-[11px] py-1.5 px-4 text-center font-medium">
-        <span>⚠️ <strong>Inoffizielles Sparportal:</strong> Wir stehen in keinerlei Verbindung oder Kooperation mit McDonald’s Deutschland oder der McDonald’s Corporation. Alle Produktnamen sind geschützte Marken.</span>
+      <div className="bg-amber-50 text-amber-900 border-b border-amber-100 text-[11px] py-1.5 px-4 text-center font-medium flex flex-wrap justify-center items-center gap-x-3 gap-y-1">
+        <span>⚠️ <strong>Inoffizielles Sparportal:</strong> Nicht von McDonald’s betrieben.</span>
+        <span className="hidden sm:inline text-amber-400">•</span>
+        <span className="inline-flex items-center text-emerald-800 font-bold bg-emerald-100/70 px-2 py-0.5 rounded-full text-[10px]">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 mr-1 animate-pulse"></span>
+          Tagesaktuell geprüft am {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}
+        </span>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

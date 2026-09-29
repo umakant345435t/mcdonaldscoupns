@@ -135,9 +135,14 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
             </button>
           </div>
 
-          <p className="text-[11px] text-gray-500 text-center md:text-right">
-            &copy; {currentYear} mcdonaldsgutscheine.de. Alle Rechte vorbehalten. Made with <Heart className="inline h-3 w-3 text-red-500 mx-0.5 fill-red-500" /> in Germany.
-          </p>
+          <div className="text-[11px] text-gray-500 text-center md:text-right space-y-1">
+            <p className="text-gray-400 font-semibold">
+              <span className="text-emerald-400">●</span> Letzte redaktionelle Prüfung aller Gutscheincodes: {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}
+            </p>
+            <p>
+              &copy; {currentYear} mcdonaldsgutscheine.de. Alle Rechte vorbehalten. Made with <Heart className="inline h-3 w-3 text-red-500 mx-0.5 fill-red-500" /> in Germany.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

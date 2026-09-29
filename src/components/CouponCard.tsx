@@ -31,9 +31,11 @@ export default function CouponCard({ coupon, onAddToCalc }: CouponCardProps) {
     return () => clearInterval(timer);
   }, [isActivated, countdown]);
 
-  const handleCopyCode = () => {
+  const handleCopyCode = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (coupon.code) {
-      navigator.clipboard.writeText(coupon.code.replace('PLU ', ''));
+      const cleanCode = coupon.code.startsWith('PLU ') ? coupon.code.replace('PLU ', '').trim() : coupon.code.trim();
+      navigator.clipboard.writeText(cleanCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
@@ -202,32 +204,66 @@ export default function CouponCard({ coupon, onAddToCalc }: CouponCardProps) {
                     <span>TIMER LÄUFT: {formatTime(countdown)}</span>
                   </div>
                   <p className="text-[10px] text-amber-700 text-center mt-1">Code an der Kasse oder am Terminal vorzeigen!</p>
-                  <p className="text-sm font-black tracking-widest text-amber-950 font-mono mt-1 select-all bg-amber-100 px-3 py-1 rounded border border-amber-200/50">
-                    {coupon.code}
-                  </p>
+                  <div className="mt-1 flex items-center space-x-2">
+                    <span className="text-sm font-black tracking-widest text-amber-950 font-mono select-all bg-amber-100 px-3 py-1 rounded border border-amber-200/50">
+                      {coupon.code}
+                    </span>
+                    <button
+                      onClick={handleCopyCode}
+                      className="px-2.5 py-1 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center space-x-1"
+                      title="Code kopieren"
+                    >
+                      {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                      <span className="text-[10px]">{copied ? 'Kopiert!' : 'Kopieren'}</span>
+                    </button>
+                  </div>
                 </div>
               ) : (
-                <button
-                  onClick={() => setIsActivated(true)}
-                  className="w-full flex items-center justify-center space-x-2 py-2 px-4 bg-amber-500 hover:bg-amber-600 text-amber-950 rounded-xl text-xs font-black shadow-xs cursor-pointer transition-colors"
-                >
-                  <Smartphone className="h-3.5 w-3.5" />
-                  <span>Jetzt in der Simulator-App aktivieren!</span>
-                </button>
+                <div className="space-y-1.5">
+                  <div className="flex items-center space-x-2">
+                    <div 
+                      onClick={handleCopyCode}
+                      title="Klicken zum Kopieren"
+                      className="bg-amber-50 hover:bg-amber-100/70 cursor-pointer flex-1 px-3 py-2 rounded-xl border border-amber-200/60 text-center font-mono text-xs font-black text-amber-900 selection:bg-amber-100 transition-colors"
+                    >
+                      {coupon.code}
+                    </div>
+                    <button
+                      onClick={handleCopyCode}
+                      className={`px-3 py-2 ${copied ? 'bg-emerald-600 text-white' : 'bg-amber-500 hover:bg-amber-600 text-amber-950'} font-bold rounded-xl transition-all shadow-xs cursor-pointer flex items-center space-x-1.5 shrink-0`}
+                      title="App-Code kopieren"
+                    >
+                      {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                      <span className="text-xs">{copied ? 'Kopiert!' : 'Kopieren'}</span>
+                    </button>
+                  </div>
+                  <button
+                    onClick={() => setIsActivated(true)}
+                    className="w-full flex items-center justify-center space-x-2 py-1.5 px-3 bg-amber-100 hover:bg-amber-200 text-amber-950 rounded-lg text-[11px] font-bold cursor-pointer transition-colors"
+                  >
+                    <Smartphone className="h-3 w-3" />
+                    <span>In Simulator-App aktivieren</span>
+                  </button>
+                </div>
               )}
             </div>
           ) : (
             <div className="flex items-center space-x-2">
-              <div className="bg-gray-100 flex-1 px-3 py-2 rounded-xl border border-gray-200/50 text-center font-mono text-xs font-black text-gray-800 selection:bg-red-100">
-                {coupon.code ? coupon.code : 'KEIN CODE NÖTIG'}
+              <div 
+                onClick={handleCopyCode}
+                title="Klicken zum Kopieren"
+                className="bg-gray-100 hover:bg-gray-200/80 cursor-pointer flex-1 px-3 py-2 rounded-xl border border-gray-200/50 text-center font-mono text-xs font-black text-gray-800 selection:bg-red-100 transition-colors flex items-center justify-center space-x-1"
+              >
+                <span>{coupon.code ? coupon.code : 'KEIN CODE NÖTIG'}</span>
               </div>
               {coupon.code && (
                 <button
                   onClick={handleCopyCode}
-                  className="p-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl transition-all shadow-xs cursor-pointer"
+                  className={`px-3 py-2 ${copied ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-red-600 hover:bg-red-700'} text-white rounded-xl transition-all shadow-xs cursor-pointer flex items-center space-x-1.5 shrink-0`}
                   title="PLU-Nummer kopieren"
                 >
                   {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  <span className="text-xs font-bold">{copied ? 'Kopiert!' : 'Kopieren'}</span>
                 </button>
               )}
             </div>
@@ -238,8 +274,8 @@ export default function CouponCard({ coupon, onAddToCalc }: CouponCardProps) {
 
       {/* Verified seal overlay */}
       {coupon.verified && (
-        <span className="absolute bottom-1 right-2.5 text-[9px] text-emerald-600 font-mono font-bold uppercase select-none opacity-80 flex items-center space-x-0.5">
-          <span>✓ Redaktionell verifiziert</span>
+        <span className="absolute bottom-1 right-2.5 text-[9px] text-emerald-600 font-mono font-bold uppercase select-none opacity-90 flex items-center space-x-0.5">
+          <span>✓ Heute geprüft ({new Date().toLocaleDateString('de-DE')})</span>
         </span>
       )}
     </div>

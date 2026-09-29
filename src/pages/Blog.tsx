@@ -180,7 +180,7 @@ export default function Blog({ currentPath, setPath }: BlogProps) {
         <div className="space-y-3 max-w-3xl">
           <div className="inline-flex items-center space-x-1.5 bg-red-100 text-red-800 px-3 py-1 rounded-lg text-xs font-black uppercase tracking-wider">
             <BookOpen className="h-3.5 w-3.5" />
-            <span>Verbraucher-Information & Ratgeber</span>
+            <span>Verbraucher-Information &amp; Ratgeber • Stand: {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
             Praxistests & McDonald’s Sparfibel

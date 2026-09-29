@@ -85,8 +85,8 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
         <div className="bg-gradient-to-br from-red-700 via-red-650 to-amber-600 rounded-3xl p-6 md:p-10 text-white shadow-xl mb-10 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
           <div className="max-w-3xl space-y-4 relative z-10">
-            <span className="inline-flex items-center space-x-1 bg-yellow-400 text-gray-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-              Aktuell: Herbst 2026 PDF
+            <span className="inline-flex items-center space-x-1.5 bg-yellow-400 text-gray-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+              Aktuell geprüft am {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })} • Gültige PDF-Coupons
             </span>
             <h1 className="text-3xl md:text-4xl font-black tracking-tight leading-tight">
               McDonald's Gutscheine PDF-Download &amp; Druck-Center
@@ -103,7 +103,7 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
           <div className="space-y-1">
             <p className="font-bold text-gray-900">Information zur Unabhängigkeit &amp; rechtliche Hinweise</p>
             <p className="leading-relaxed">
-              Dieses Download-Center ist ein redaktionelles Serviceangebot unseres unabhängigen Sparportals. Die hier gelisteten Couponcodes und Angaben basieren auf den offiziellen nationalen Verbandswerten von McDonald's Deutschland für Juni 2026. Wir hosten keine urheberrechtlich geschützten Markenzeichen oder urheberrechtlich geschützte Bilddateien. Alle Downloads werden als nützliche Textzusammenfassungen und druckoptimierte PDF-Referenzbögen bereitgestellt.
+              Dieses Download-Center ist ein redaktionelles Serviceangebot unseres unabhängigen Sparportals. Die hier gelisteten Couponcodes und Angaben basieren auf den bundesweit gültigen Verbandswerten von McDonald's Deutschland (Stand: {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}). Wir hosten keine urheberrechtlich geschützten Markenzeichen oder urheberrechtlich geschützte Bilddateien. Alle Downloads werden als nützliche Textzusammenfassungen und druckoptimierte PDF-Referenzbögen bereitgestellt.
             </p>
           </div>
         </div>

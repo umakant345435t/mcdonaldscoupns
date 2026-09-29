@@ -158,9 +158,9 @@ export default function CategoryPage({ categorySlug, onAddToCalc, setPath }: Cat
         
         {/* Title area */}
         <div className="space-y-3 max-w-3xl">
-          <div className="inline-flex items-center space-x-1 bg-red-100 text-red-800 px-3 py-1 rounded-lg text-xs font-black uppercase tracking-wider">
-            <Tag className="h-3 w-3" />
-            <span>Aktiver Spar-Katalog 2026</span>
+          <div className="inline-flex items-center space-x-1.5 bg-red-100 text-red-800 px-3 py-1 rounded-lg text-xs font-black uppercase tracking-wider">
+            <Tag className="h-3.5 w-3.5" />
+            <span>Aktiver Spar-Katalog 2026 • Geprüft heute ({new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })})</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
             {pageMeta.title}

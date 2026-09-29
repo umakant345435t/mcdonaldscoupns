@@ -72,9 +72,9 @@ export default function Home({
           
           {/* Pitch Tagline */}
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-950 text-xs font-black px-3 py-1.5 rounded-full uppercase tracking-wider">
-              <Sparkles className="h-3 w-3" />
-              <span>Geprüft &amp; Gültig 2026 • Aktuelle PLU-Codes</span>
+            <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-950 text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>Geprüft &amp; Gültig heute am {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
               McDonald Gutscheine & Coupons für <span className="text-yellow-400">Deutschland</span>
@@ -136,7 +136,7 @@ export default function Home({
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none"></div>
             <div className="space-y-3 z-10">
               <span className="inline-flex items-center space-x-1.5 bg-yellow-400 text-gray-950 text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider">
-                Aktuell: Herbst / September 2026
+                Aktuell geprüft: {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}
               </span>
               <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight">
                 Offizielles McDonald's Coupon-Heft als PDF
@@ -161,9 +161,11 @@ export default function Home({
             <div className="flex justify-between items-center mb-6">
               <div>
                 <h2 className="text-xl md:text-2xl font-black text-gray-900 tracking-tight">
-                  🔥 Neue Gutscheine & Beliebte Coupons
+                  🔥 Neue Gutscheine &amp; Beliebte Coupons
                 </h2>
-                <p className="text-xs text-gray-500 mt-1">Saisonale Sonderauszüge direkt einlösbar per PLU-Gutscheincode an der Kasse oder am Terminal.</p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Stand heute ({new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}): Alle PLU-Codes per Klick kopieren oder am Terminal einlösen.
+                </p>
               </div>
               <button
                 onClick={() => setPath('/gutscheine/')}
