@@ -5,46 +5,48 @@ interface PdfDownloadsProps {
   setPath: (path: string) => void;
 }
 
+const GOOGLE_DRIVE_DOWNLOAD_URL = "https://drive.usercontent.google.com/download?id=1VB8nRvYAwGL6DxyR8qM9o7t1OHAVasP-&export=download";
+
 export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
   const pdfList = [
     {
-      id: 'pdf-complete',
-      title: "McDonald's Coupon-Heft 2026 (Komplett)",
-      description: "Das gesamte gedruckte Spar-Heft mit allen Coupon-Bögen im handlichen, druckoptimierten DIN-A4-Format. Enthält alle Doppelpacks, Nuggets, Desserts und Snacking-Deals.",
-      fileSize: "1.2 MB",
+      id: 'pdf-bonusbuch-2026',
+      title: "McDonald's Bonusbuch 2026 (Offizieller Coupon-Bogen A4)",
+      description: "Das offizielle gedruckte Bonusbuch für McDonald's Deutschland im druckoptimierten DIN-A4-Format (210x297 mm). Enthält alle aktuellen Doppelpacks, Spar-Kombis, 20er Nuggets, Frühstücks- und Dessert-Deals inklusive Kassen-PLUs.",
+      fileSize: "6.3 MB",
       pages: 2,
-      featuredCoupons: ["Doppelpack 226", "Doppelpack 344", "Doppelpack 338", "Klassiker Doppelpack 350", "XL Doppelpack 351", "Doppelpack 318", "20er Nuggets 499", "Snacking 305", "Dessert 209"],
-      downloadUrl: "/mcdonalds_gutscheine_juni_2026.pdf",
-      fileName: "mcdonalds_gutscheine_2026_komplett.pdf"
+      featuredCoupons: ["MCD2X10 (Liefer-Rabatt)", "Doppelpack 226", "Doppelpack 344", "Doppelpack 338", "Klassiker 350", "XL Deal 351", "McRib 318", "20er Nuggets 499", "Snacks 305"],
+      downloadUrl: GOOGLE_DRIVE_DOWNLOAD_URL,
+      fileName: "26053_Bonusbuch_SEPT_DE_Online_210x297.pdf"
     },
     {
       id: 'pdf-doublepacks',
       title: "Doppelpack & Burger-Upgrades (Sonderauszug)",
       description: "Spezieller, hochauflösender Auszug der beliebten Doppelpack-Aktionen. Ideal für den schnellen Einkauf zu zweit oder für den extragroßen Hunger.",
-      fileSize: "650 KB",
+      fileSize: "6.3 MB",
       pages: 1,
       featuredCoupons: ["Doppelpack 226", "Doppelpack 344", "Doppelpack 338", "Klassiker Doppelpack 350", "XL Doppelpack 351"],
-      downloadUrl: "/mcdonalds_gutscheine_juni_2026.pdf",
+      downloadUrl: GOOGLE_DRIVE_DOWNLOAD_URL,
       fileName: "mcdonalds_gutscheine_doppelpack_deals.pdf"
     },
     {
       id: 'pdf-family',
       title: "Familien, Kids & Happy Meal® PDF-Gutscheine",
       description: "Perfekt für den Ausflug mit der Familie. Beinhaltet alle Happy Meal Kombinationen, Familien-Menüs sowie spielerische Spar-Kombis.",
-      fileSize: "380 KB",
+      fileSize: "6.3 MB",
       pages: 1,
       featuredCoupons: ["Happy Meal + Klassiker Deal 309", "Happy Meal + Nuggets Deal 307", "Happy Meal + McChicken Deal 215"],
-      downloadUrl: "/mcdonalds_gutscheine_juni_2026.pdf",
+      downloadUrl: GOOGLE_DRIVE_DOWNLOAD_URL,
       fileName: "mcdonalds_gutscheine_familien_deals.pdf"
     },
     {
       id: 'pdf-snacks',
       title: "Snacks, Beilagen & Dessert Coupons",
       description: "Für den kleinen Hunger zwischendurch. Beinhaltet Gutscheine für Heißgetränke, McCafé Kuchen, Cookies, Milchshakes, Chili Cheese Snackers und Chicken Wings.",
-      fileSize: "480 KB",
+      fileSize: "6.3 MB",
       pages: 1,
       featuredCoupons: ["Red Chili Cheese Snackers 305", "Heiße Tasche nach Wahl 201", "5 Chicken Wings 306", "Dessert McFlurry 167", "Milchshake 0,4l 209"],
-      downloadUrl: "/mcdonalds_gutscheine_juni_2026.pdf",
+      downloadUrl: GOOGLE_DRIVE_DOWNLOAD_URL,
       fileName: "mcdonalds_gutscheine_snacks_desserts.pdf"
     }
   ];
@@ -162,8 +164,10 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
                 <div className="pt-6 border-t border-gray-50 mt-6 flex flex-col sm:flex-row gap-3">
                   <a
                     href={pdf.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     download={pdf.fileName}
-                    className="flex-1 text-center px-4 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-xl text-xs cursor-pointer transition-all flex items-center justify-center space-x-1.5"
+                    className="flex-1 text-center px-4 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-xl text-xs cursor-pointer transition-all flex items-center justify-center space-x-1.5 shadow-sm"
                   >
                     <Download className="h-4 w-4" />
                     <span>Jetzt herunterladen (PDF)</span>
@@ -268,14 +272,11 @@ export default function PdfDownloads({ setPath }: PdfDownloadsProps) {
           </div>
         </div>
 
-        {/* Global Internal Backlink */}
+        {/* Global Internal Navigation */}
         <div className="bg-white rounded-3xl border border-gray-150/75 p-6 mt-8 text-xs text-gray-600 leading-relaxed space-y-2">
           <p className="font-bold text-gray-900">📍 Nützliche Links &amp; Empfehlungen</p>
           <p>
-            Möchtest du alle aktiven Online-Coupons, Kassen-PLU-Codes und exklusiven Rabatte auf einen Blick sehen? Besuche unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a> in Deutschland.
-          </p>
-          <p className="border-t border-gray-100 pt-2 text-gray-500">
-            Zusätzlich zum offiziellen Coupon-Bogen kannst du auch die Angebote und Spezialitäten anderer Restaurant-Ketten vergleichen im aktuellen <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold underline text-red-650 hover:text-red-700">Burger King Menu</a>.
+            Möchtest du alle aktiven Online-Coupons, Kassen-PLU-Codes und exklusiven Rabatte auf einen Blick sehen? Besuche unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a> in Deutschland oder berechne deinen Sparbetrag mit unserem interaktiven Spar-Rechner.
           </p>
         </div>
 

@@ -97,11 +97,13 @@ export default function Home({
                 App-Angebote entdecken 📱
               </button>
               <a
-                href="/mcdonalds_gutscheine_juni_2026.pdf"
-                download="mcdonalds_gutscheine_juni_2026.pdf"
+                href="https://drive.usercontent.google.com/download?id=1VB8nRvYAwGL6DxyR8qM9o7t1OHAVasP-&export=download"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="26053_Bonusbuch_SEPT_DE_Online_210x297.pdf"
                 className="px-6 py-3.5 bg-white/15 hover:bg-white/25 text-white font-black rounded-2xl text-sm cursor-pointer transition-all hover:scale-102 flex items-center space-x-2 font-sans"
               >
-                <span>PDF Coupon-Heft herunterladen 📥</span>
+                <span>Bonusbuch PDF herunterladen 📥</span>
               </a>
             </div>
 
@@ -139,19 +141,21 @@ export default function Home({
                 Aktuell geprüft: {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}
               </span>
               <h3 className="text-xl md:text-2xl font-black tracking-tight leading-tight">
-                Offizielles McDonald's Coupon-Heft als PDF
+                Offizielles McDonald's Bonusbuch 2026 als PDF
               </h3>
               <p className="text-xs md:text-sm text-red-50 max-w-xl leading-relaxed font-medium">
-                Lade dir hier das komplette gedruckte Coupon-Heft mit allen 20+ Rabattcoupons (Doppelpacks, Nuggets, Dessert & Snacks) als druckoptimiertes PDF herunter oder nutze die PLU-Codes direkt an der Kasse!
+                Lade dir hier das komplette Bonusbuch mit allen 20+ Rabattcoupons (Doppelpacks, Nuggets, Dessert, Frühstück &amp; Liefercode MCD2X10) als druckoptimiertes A4-PDF herunter!
               </p>
             </div>
             <div className="shrink-0 z-10 w-full md:w-auto">
               <a
-                href="/mcdonalds_gutscheine_juni_2026.pdf"
-                download="mcdonalds_gutscheine_juni_2026.pdf"
+                href="https://drive.usercontent.google.com/download?id=1VB8nRvYAwGL6DxyR8qM9o7t1OHAVasP-&export=download"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="26053_Bonusbuch_SEPT_DE_Online_210x297.pdf"
                 className="block w-full md:w-auto text-center px-6 py-4 bg-yellow-400 hover:bg-yellow-500 text-gray-950 font-black rounded-2xl shadow-lg shadow-yellow-500/20 text-sm cursor-pointer transition-all hover:scale-102 font-sans"
               >
-                📥 PDF herunterladen
+                📥 Bonusbuch herunterladen
               </a>
             </div>
           </div>
@@ -364,7 +368,9 @@ export default function Home({
                     <p className="text-[10px] text-gray-400 leading-none">{pdf.desc} • <span className="font-mono">{pdf.size}</span></p>
                   </div>
                   <a
-                    href="/mcdonalds_gutscheine_juni_2026.pdf"
+                    href="https://drive.usercontent.google.com/download?id=1VB8nRvYAwGL6DxyR8qM9o7t1OHAVasP-&export=download"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     download={pdf.file}
                     className="p-1.5 bg-white hover:bg-yellow-400 border border-gray-200 text-gray-700 hover:text-gray-950 rounded-lg hover:border-yellow-400 cursor-pointer transition-colors shadow-xs"
                     title="PDF Herunterladen"
@@ -411,59 +417,42 @@ export default function Home({
             </ul>
           </div>
 
-          {/* Partner Backlinks */}
-          <div className="bg-white rounded-2xl border border-gray-100 p-6 space-y-4 relative overflow-hidden text-xs">
+          {/* McDonald's Spartipps & Kiosk-Guide */}
+          <div className="bg-white rounded-2xl border border-gray-150 p-6 space-y-4 relative overflow-hidden text-xs shadow-xs">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-red-650"></div>
             <h3 className="font-bold text-gray-900 text-sm tracking-tight flex items-center space-x-1.5">
-              <span>🍔 Fast-Food Partnerportale</span>
+              <span>🍟 Spartipps &amp; Kiosk-Tricks</span>
             </h3>
             <p className="text-gray-500 leading-relaxed text-[11px]">
-              Entdecke weitere nützliche Portale für aktuelle Gutscheine und Menü-Übersichten anderer bekannter Restaurantketten:
+              Maximale Ersparnis bei jedem Restaurantbesuch in Deutschland mit diesen einfachen Kniffen:
             </p>
-            <div className="space-y-2.5">
-              <div className="p-3.5 rounded-xl border border-amber-200 bg-amber-50/40 space-y-2 text-[11px] text-gray-700 leading-relaxed">
-                <p className="font-bold text-gray-900">👑 Flame-Grilled Fast-Food Empfehlungen</p>
+            <div className="space-y-3">
+              <div className="p-3 rounded-xl border border-amber-200 bg-amber-50/50 space-y-1 text-[11px] text-gray-700 leading-relaxed">
+                <p className="font-bold text-gray-900 flex items-center gap-1.5">
+                  <span className="text-amber-600 font-mono font-bold">1.</span> PLU-Codes am Kiosk eintippen
+                </p>
                 <p>
-                  Vergleiche beliebte Flame-Grilled Burger, herzhafte King Snacks und tagesaktuelle Kombinationen direkt in der digitalen Übersicht für das beliebte <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold text-red-650 hover:underline">Burger King Menu</a>.
+                  Tippe am Touchscreen-Terminal auf "Gutschein" und gib den 3-stelligen Kassen-PLU-Code direkt per Tastatur ein – ganz ohne Smartphone-Scan.
                 </p>
               </div>
-              <div className="p-3.5 rounded-xl border border-red-100 bg-red-50/30 space-y-2 text-[11px] text-gray-700 leading-relaxed">
-                <p className="font-bold text-gray-900">🍱 Empfehlung: Japanische Bento Fast-Food Kultur</p>
-                <p>
-                  Reist du nach Japan und bist unsicher bezüglich Preisen und Speisekarte? Nutze einfach die praktischen Filter auf <a href="https://hottomottomenu.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-red-650 hover:underline">ほっともっと メニュー</a>, um die beliebtesten japanischen Bento-Menüs schnell zu vergleichen.
-                </p>
-              </div>
-            </div>
-          </div>
 
-          {/* Core Web Vitals Optimization / Google AdSense Notice Card */}
-          <div className="bg-linear-to-br from-gray-900 to-gray-800 rounded-2xl p-6 text-white text-xs space-y-4">
-            <h3 className="font-bold text-sm text-yellow-400 flex items-center space-x-1.5">
-              <span>⚡ Core Web Vitals Status</span>
-            </h3>
-            <p className="text-gray-300 leading-relaxed text-[11px]">
-              Diese Webseite wurde von uns vollständig auf Geschwindigkeit und mobilen Zugriff optimiert, um eine extrem benutzerfreundliche Navigation zu gewährleisten:
-            </p>
-            <div className="space-y-2 font-mono text-[11px]">
-              <div className="flex justify-between items-center text-gray-300 border-b border-gray-800 pb-1">
-                <span>Core Web Vitals Metric:</span>
-                <span className="text-green-400 font-bold">EXZELLENT</span>
+              <div className="p-3 rounded-xl border border-red-100 bg-red-50/50 space-y-1 text-[11px] text-gray-700 leading-relaxed">
+                <p className="font-bold text-gray-900 flex items-center gap-1.5">
+                  <span className="text-red-600 font-mono font-bold">2.</span> Lieferservice-Code MCD2X10
+                </p>
+                <p>
+                  Bestelle über Uber Eats nach Hause und spare mit dem Code <strong className="text-red-700 font-mono">MCD2X10</strong> 2x 10 € auf deine ersten Bestellungen.
+                </p>
               </div>
-              <div className="flex justify-between items-center text-gray-400">
-                <span>LPD (Loading Speed)</span>
-                <span className="text-white font-bold">&lt; 1.2s</span>
+
+              <div className="p-3 rounded-xl border border-gray-200 bg-gray-50 space-y-1 text-[11px] text-gray-700 leading-relaxed">
+                <p className="font-bold text-gray-900 flex items-center gap-1.5">
+                  <span className="text-gray-700 font-mono font-bold">3.</span> Bon-Feedback für Gratis-Getränk
+                </p>
+                <p>
+                  Auf jedem Kassenbon steht ein Feedback-Code für die offizielle Gästebefragung. Nach 2 Minuten erhältst du oft einen Gutschein für ein Gratis-Getränk.
+                </p>
               </div>
-              <div className="flex justify-between items-center text-gray-400">
-                <span>INP (Micro-Delay)</span>
-                <span className="text-white font-bold">&lt; 150ms</span>
-              </div>
-              <div className="flex justify-between items-center text-gray-400">
-                <span>CLS (No Shifts)</span>
-                <span className="text-white font-bold">0.05</span>
-              </div>
-            </div>
-            <div className="text-[10px] text-gray-400 pt-1 leading-relaxed bg-gray-950 p-2.5 rounded-lg border border-gray-800">
-              💡 <strong>AdSense-Hinweis:</strong> Schnelle Ladezeiten und ein stabiles Layout verringern Absprungraten und verdoppeln die AdSense eCPM Werte!
             </div>
           </div>
 

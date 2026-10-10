@@ -117,18 +117,13 @@ export default function Blog({ currentPath, setPath }: BlogProps) {
               ))}
             </div>
 
-            {/* Interne Verlinkung & SEO Backlinks */}
-            {activeArticle.slug !== 'japanisches-fast-food-bento-guide' && (
-              <div className="bg-red-50/40 rounded-2xl border border-red-100 p-5 mt-8 space-y-3 text-xs text-gray-700">
-                <p className="font-bold text-gray-900">🔗 Weiterführende Informationen & Empfehlungen</p>
-                <p className="leading-relaxed">
-                  Für alle aktuellen Rabattcodes, exklusiven Coupons und Sparaktionen in Deutschland nutze immer unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a>.
-                </p>
-                <p className="leading-relaxed border-t border-red-100/80 pt-2 text-gray-600">
-                  Wer neben McDonald's Rabatten auch Fast-Food-Klassiker anderer bekannter Ketten vergleichen möchte, findet alle aktuellen Preise, Nährwerte und Beilagen im <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold underline text-red-650 hover:text-red-700">Burger King Menu</a>.
-                </p>
-              </div>
-            )}
+            {/* Interne Verlinkung */}
+            <div className="bg-red-50/40 rounded-2xl border border-red-100 p-5 mt-8 space-y-3 text-xs text-gray-700">
+              <p className="font-bold text-gray-900">🔗 Weiterführende Informationen & Spartipps</p>
+              <p className="leading-relaxed">
+                Für alle aktuellen Rabattcodes, exklusiven Coupons und Sparaktionen in Deutschland nutze immer unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a>.
+              </p>
+            </div>
 
             {/* Share and Interne Verlinkung footer row */}
             <div className="border-t border-gray-100 pt-8 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -256,14 +251,11 @@ export default function Blog({ currentPath, setPath }: BlogProps) {
           </div>
         </div>
 
-        {/* Global SEO Backlink Section */}
+        {/* Global SEO Internal Links Section */}
         <div className="bg-white rounded-3xl border border-gray-150 p-6 md:p-8 mt-8 space-y-3 text-xs text-gray-700 shadow-xs">
-          <p className="font-bold text-gray-900 text-sm">💡 Nützliche Links &amp; Internationale Partner</p>
+          <p className="font-bold text-gray-900 text-sm">💡 Weitere Spartipps &amp; Gutscheine</p>
           <p className="leading-relaxed">
-            Auf mcdonaldsgutscheine.de bieten wir dir tagesaktuelle Spartipps, Vergleiche und Coupon-Auszüge. Besuche für die vollständige Rabatt-Übersicht unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a>.
-          </p>
-          <p className="leading-relaxed border-t border-gray-100 pt-3 text-gray-600">
-            Möchtest du weitere beliebte Fast-Food-Angebote und Flame-Grilled Speisekarten im Detail vergleichen? Finde eine umfassende Übersicht aller Gerichte, Preise und Menü-Kombinationen direkt im <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="font-bold underline text-red-650 hover:text-red-700">Burger King Menu</a>.
+            Auf mcdonaldsgutscheine.de bieten wir dir tagesaktuelle Spartipps, Vergleiche und Coupon-Auszüge für Schnellrestaurants in Deutschland. Besuche für die vollständige Rabatt-Übersicht unsere Startseite für <a href="https://www.mcdonaldsgutscheine.de/" className="font-bold underline text-red-650 hover:text-red-700">McDonald Gutscheine</a> oder lade das aktuelle <button onClick={() => setPath('/gutscheine-pdf-download/')} className="font-bold underline text-red-650 hover:text-red-700 cursor-pointer">Coupon-Heft als PDF</button> herunter.
           </p>
         </div>
 

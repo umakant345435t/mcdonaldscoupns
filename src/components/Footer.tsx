@@ -64,24 +64,29 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
                 ☕ McCafé Kuchen & Heißgetränk Sparpack
               </button>
             </li>
+            <li>
+              <button onClick={() => handleNavClick('/gutscheine-pdf-download/')} className="hover:text-amber-400 transition-colors cursor-pointer text-left font-bold text-yellow-400">
+                📥 McDonald's Bonusbuch 2026 (PDF)
+              </button>
+            </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-gray-200 font-semibold text-sm tracking-wider uppercase mb-3">Sicher & AdSense Konform</h4>
+          <h4 className="text-gray-200 font-semibold text-sm tracking-wider uppercase mb-3">Sicher &amp; AdSense Konform</h4>
           <p className="text-xs text-gray-400 leading-relaxed mb-3">
-            Wir stellen ausschließlich legal einlösbare PLU-Nummern und redaktionelle Testberichte / Vergleiche bereit. Alle Vouchercodes werden redaktionell geprüft und wöchentlich manuell verifiziert. Besuche für die tagesaktuelle Übersicht immer unsere Hauptseite für <a href="https://www.mcdonaldsgutscheine.de/" className="text-yellow-400 hover:underline font-bold">McDonald Gutscheine</a>.
+            Wir stellen ausschließlich legal einlösbare PLU-Nummern und redaktionelle Testberichte / Vergleiche bereit. Alle Vouchercodes werden redaktionell geprüft und regelmäßig verifiziert. Besuche für die tagesaktuelle Übersicht immer unsere Hauptseite für <a href="https://www.mcdonaldsgutscheine.de/" className="text-yellow-400 hover:underline font-bold">McDonald Gutscheine</a>.
           </p>
           <div className="flex flex-wrap gap-2 mb-4">
-            <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ DSGVO Konform</span>
-            <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ AdSense Approved Ready</span>
+            <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ DSGVO &amp; GDPR</span>
+            <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ AdSense Compliant</span>
             <span className="bg-gray-800 text-[10px] text-gray-300 font-mono px-2.5 py-1 rounded-sm border border-gray-700 font-semibold">✓ SSL Verschlüsselt</span>
           </div>
 
           <div className="pt-3 border-t border-gray-800 text-xs text-gray-400 leading-relaxed space-y-1">
-            <h5 className="text-gray-300 font-bold text-[11px] uppercase tracking-wider">👑 Fast-Food Partner &amp; Empfehlungen</h5>
+            <h5 className="text-gray-300 font-bold text-[11px] uppercase tracking-wider">🔒 Transparenz &amp; Datenaktualität</h5>
             <p className="text-[11px] text-gray-400">
-              Entdecke beliebte Fast-Food-Varianten, gegrillte Spezialitäten und internationale Angebote im übersichtlichen Gastronomie-Guide für das <a href="https://burgerkingsemenu.com" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:underline font-bold">Burger King Menu</a>.
+              Unsere Redaktion prüft Gutscheincodes regelmäßig vor Ort. Hinweise zu abgelaufenen Aktionen oder neuen Kassen-PLUs nehmen wir gerne per E-Mail an <a href="mailto:kontakt@mcdonaldsgutscheine.de" className="text-yellow-400 hover:underline">kontakt@mcdonaldsgutscheine.de</a> entgegen.
             </p>
           </div>
         </div>
@@ -92,28 +97,28 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
             <button
-              onClick={() => handleNavClick('/ueber-uns/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/ueber-uns/' ? 'text-yellow-400 font-bold' : ''}`}
+              onClick={() => handleNavClick('/about-us/')}
+              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/about-us/' || currentPath === '/ueber-uns/' || currentPath === '/about/' ? 'text-yellow-400 font-bold' : ''}`}
             >
               Über Uns
             </button>
             <button
-              onClick={() => handleNavClick('/kontakt/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/kontakt/' ? 'text-yellow-400 font-bold' : ''}`}
+              onClick={() => handleNavClick('/contact/')}
+              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/contact/' || currentPath === '/kontakt/' || currentPath === '/contact-us/' ? 'text-yellow-400 font-bold' : ''}`}
             >
               Kontakt
             </button>
             <button
               onClick={() => handleNavClick('/impressum/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/impressum/' ? 'text-yellow-400 font-bold' : ''}`}
+              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/impressum/' || currentPath === '/imprint/' ? 'text-yellow-400 font-bold' : ''}`}
             >
               Impressum
             </button>
             <button
-              onClick={() => handleNavClick('/datenschutz/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/datenschutz/' ? 'text-yellow-400 font-bold' : ''}`}
+              onClick={() => handleNavClick('/privacy-policy/')}
+              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/privacy-policy/' || currentPath === '/datenschutz/' || currentPath === '/privacy/' ? 'text-yellow-400 font-bold' : ''}`}
             >
-              Datenschutzerklärung
+              Datenschutz
             </button>
             <button
               onClick={() => handleNavClick('/cookies/')}
@@ -123,13 +128,13 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
             </button>
             <button
               onClick={() => handleNavClick('/nutzungsbedingungen/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/nutzungsbedingungen/' ? 'text-yellow-400 font-bold' : ''}`}
+              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/nutzungsbedingungen/' || currentPath === '/terms/' ? 'text-yellow-400 font-bold' : ''}`}
             >
               Nutzungsbedingungen
             </button>
             <button
               onClick={() => handleNavClick('/haftungsausschluss/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/haftungsausschluss/' ? 'text-yellow-400 font-bold' : ''}`}
+              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/haftungsausschluss/' || currentPath === '/disclaimer/' ? 'text-yellow-400 font-bold' : ''}`}
             >
               Haftungsausschluss
             </button>

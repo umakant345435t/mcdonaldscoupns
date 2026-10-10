@@ -27,20 +27,28 @@ const routes = [
   '/angebote/',
   '/blog/',
   '/ueber-uns/',
+  '/about/',
+  '/about-us/',
   '/kontakt/',
+  '/contact/',
+  '/contact-us/',
   '/datenschutz/',
+  '/privacy/',
+  '/privacy-policy/',
   '/impressum/',
+  '/imprint/',
   '/cookies/',
   '/haftungsausschluss/',
   '/nutzungsbedingungen/',
+  '/terms/',
   '/gutscheine-pdf-download/'
 ];
 
 // All dynamic blog slugs
 const blogSlugs = [
   'mcdonalds-treueprogramm-erklaert',
-  'japanisches-fast-food-bento-guide',
-  'burger-king-menue-preise-kalorien-angebote'
+  'mcdonalds-lieferservice-uber-eats-sparen',
+  'mcdonalds-plu-codes-sparen'
 ];
 
 // Add blog subroutes
@@ -51,8 +59,8 @@ blogSlugs.forEach(slug => {
 // Dynamic metadata database for physical pages
 const pageMeta = {
   '/': {
-    title: "McDonald Gutscheine 2026 – Aktuelle Coupons & Angebote",
-    desc: "Finde aktuelle McDonald Gutscheine, Coupons und Angebote. Spare bei Burgern, Menüs, McFlurry und mehr."
+    title: "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote Deutschland",
+    desc: "Tagesaktuelle McDonald's Gutscheine & Coupons für Deutschland. Spare mit Kassen-PLUs, MyMcDonald's App & Uber Eats Liefer-Code MCD2X10."
   },
   '/gutscheine/': {
     title: "McDonald's Gutscheine 2026 – Alle Coupons & Sparcodes",
@@ -87,20 +95,48 @@ const pageMeta = {
     desc: "Lese echte Praxistests und nützliche Hacks, um bei der Bestellung Geld zu sparen."
   },
   '/ueber-uns/': {
+    title: "Über Uns / About Us – mcdonaldsgutscheine.de",
+    desc: "Über mcdonaldsgutscheine.de: Dein unabhängiges Verbraucherportal für aktuelle Sparaktionen in Deutschland."
+  },
+  '/about/': {
+    title: "Über Uns (About Us) – mcdonaldsgutscheine.de",
+    desc: "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland."
+  },
+  '/about-us/': {
     title: "Über Uns – mcdonaldsgutscheine.de",
-    desc: "Über mcdonaldsgutscheine.de: Dein unabhängiges, werbefreies Verbraucherportal für aktuelle Sparaktionen in Deutschland."
+    desc: "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland."
   },
   '/kontakt/': {
-    title: "Support & Kontaktformular – mcdonaldsgutscheine.de",
+    title: "Kontakt & Support – mcdonaldsgutscheine.de",
     desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheinen."
   },
+  '/contact/': {
+    title: "Kontakt & Support – mcdonaldsgutscheine.de",
+    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland."
+  },
+  '/contact-us/': {
+    title: "Kontakt & Support – mcdonaldsgutscheine.de",
+    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland."
+  },
   '/datenschutz/': {
-    title: "Datenschutzerklärung (DSGVO & AdSense) – mcdonaldsgutscheine.de",
-    desc: "Ausführliche Datenschutzerklärung nach DSGVO-Richtlinien für unser unabhängiges Sparportal."
+    title: "Datenschutzerklärung (Privacy Policy) – mcdonaldsgutscheine.de",
+    desc: "Ausführliche Datenschutzerklärung (DSGVO & Google AdSense Richtlinien) für unser Sparportal."
+  },
+  '/privacy/': {
+    title: "Datenschutzerklärung (Privacy Policy) – mcdonaldsgutscheine.de",
+    desc: "Ausführliche Datenschutzerklärung gemäß DSGVO & Google AdSense Programm-Richtlinien für unser Sparportal."
+  },
+  '/privacy-policy/': {
+    title: "Datenschutzerklärung – mcdonaldsgutscheine.de",
+    desc: "Ausführliche Datenschutzerklärung gemäß DSGVO & Google AdSense Programm-Richtlinien für unser Sparportal."
   },
   '/impressum/': {
     title: "Impressum gem. §5 TMG – mcdonaldsgutscheine.de",
     desc: "Gesetzliches Impressum mit allen Angaben nach § 5 TMG für mcdonaldsgutscheine.de."
+  },
+  '/imprint/': {
+    title: "Legal Notice / Impressum – mcdonaldsgutscheine.de",
+    desc: "Statutory legal information according to § 5 TMG for mcdonaldsgutscheine.de."
   },
   '/cookies/': {
     title: "Cookie-Richtlinie – mcdonaldsgutscheine.de",
@@ -114,21 +150,25 @@ const pageMeta = {
     title: "Nutzungsbedingungen – mcdonaldsgutscheine.de",
     desc: "Allgemeine Geschäfts- und Nutzungsbedingungen für die Verwendung unseres Portals."
   },
+  '/terms/': {
+    title: "Terms of Service – mcdonaldsgutscheine.de",
+    desc: "Terms of service and acceptable use for mcdonaldsgutscheine.de."
+  },
   '/gutscheine-pdf-download/': {
-    title: "McDonald's Gutscheine PDF-Download & Druck-Center",
-    desc: "Lade das offizielle McDonald's Coupon-Heft für Juni 2026 als druckoptimiertes PDF herunter und spare offline!"
+    title: "McDonald's Gutscheine PDF-Download & Bonusbuch 2026",
+    desc: "Lade das offizielle McDonald's Bonusbuch & Coupon-Heft 2026 (A4 PDF) herunter und spare offline im Restaurant!"
   },
   '/blog/mcdonalds-treueprogramm-erklaert/': {
     title: "McDonald’s Treueprogramm erklärt: Prämien & MyMcDonalds Points",
     desc: "Punkte sammeln wie die Weltmeister und umsonst Burger essen? Erfahre ganz genau, wie das MyMcDonald’s Prämienprogramm abläuft."
   },
-  '/blog/japanisches-fast-food-bento-guide/': {
-    title: "Japanisches Fast Food wählen – Wie man schnell das passende Bento findet",
-    desc: "Erfahre, wie du auf Reisen in Japan gesundes und günstiges Fast Food findest und worauf du bei Bento-Boxen, Nährwertangaben und Allergenen achten solltest."
+  '/blog/mcdonalds-lieferservice-uber-eats-sparen/': {
+    title: "McDonald's Lieferservice Gutscheine: Mit Uber Eats & Code MCD2X10 20 € sparen",
+    desc: "Spare 2x 10 € auf deine ersten McDonald's Lieferungen über Uber Eats Deutschland mit dem exklusiven Gutscheincode MCD2X10."
   },
-  '/blog/burger-king-menue-preise-kalorien-angebote/': {
-    title: "Burger King Menü 2026 – Preise, Kalorien und aktuelle Angebote einfach vergleichen",
-    desc: "Erfahre alles über aktuelle Burger King Preise, Kalorienwerte, Nährwertangaben und beliebte Menü-Angebote auf einen Blick."
+  '/blog/mcdonalds-plu-codes-sparen/': {
+    title: "McDonald's PLU-Codes erklärt: So sparst du am Bestellterminal & McDrive",
+    desc: "Was bedeuten die 3-stelligen Kassen-PLUs? Erfahre, wie du Gutscheine blitzschnell am Easy Order Kiosk eintippst."
   }
 };
 

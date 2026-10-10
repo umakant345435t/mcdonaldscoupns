@@ -2,10 +2,10 @@ import { BlogPost } from '../types';
 
 export const BlogPosts: BlogPost[] = [
   {
-    id: 'post-4',
+    id: 'post-1',
     title: 'McDonald’s Treueprogramm erklärt: Prämien & MyMcDonalds Points',
     summary: 'Punkte sammeln wie die Weltmeister und umsonst Burger essen? Erfahre ganz genau, wie das MyMcDonald’s Prämienprogramm abläuft und ab wann sich das Punktesammeln am meisten lohnt.',
-    date: '2026-06-10',
+    date: '2026-09-15',
     readTime: '4 Min. Lesezeit',
     author: 'Daniela Becker (Gastro-Expertin)',
     slug: 'mcdonalds-treueprogramm-erklaert',
@@ -17,37 +17,33 @@ export const BlogPosts: BlogPost[] = [
     ]
   },
   {
-    id: 'post-5',
-    title: 'Japanisches Fast Food wählen – Wie man schnell das passende Bento findet',
-    summary: 'Erfahre, wie du auf Reisen in Japan gesundes und günstiges Fast Food findest und worauf du bei Bento-Boxen, Nährwertangaben und Allergenen achten solltest.',
-    date: '2026-07-28',
-    readTime: '5 Min. Lesezeit',
-    author: 'Kenji Sato (Japan Reise & Food-Guide)',
-    slug: 'japanisches-fast-food-bento-guide',
+    id: 'post-2',
+    title: 'McDonald\'s Lieferservice Gutscheine: Mit Uber Eats & Code MCD2X10 20 € sparen',
+    summary: 'Du möchtest deine Lieblingsburger bequem nach Hause bestellen? Mit dem aktuellen Liefercode MCD2X10 sparst du bei Uber Eats Deutschland gleich 2x 10 € auf deine ersten Bestellungen.',
+    date: '2026-10-01',
+    readTime: '3 Min. Lesezeit',
+    author: 'Markus Weber (Gastro- & Spartester)',
+    slug: 'mcdonalds-lieferservice-uber-eats-sparen',
     content: [
-      'Wenn es um Reisen geht, ist Japan immer ein verlockendes Ziel. Neben der charmanten urbanen Szenerie und weiteren bemerkenswerten Attraktionen ist die Vielfalt der Essensmöglichkeiten erstaunlich. Für viele hat Fast Food einen schlechten Ruf. In Japan bedeutet Fast Food Bento-Box-Restaurants. Diese Lokale bieten gesunde und relativ günstige Optionen mit einer Vielzahl von Auswahlmöglichkeiten. Für den ersten Besucher in Japan ist eine häufig gestellte Frage, welche Bento-Box man wählen soll. Wie viel kostet sie? Wie viele Kalorien werde ich verbrauchen? Hat sie Allergene? Sind die Nährwertangaben verfügbar?',
-      'Dies kann entmutigend erscheinen, besonders wenn man kein Japanisch spricht. Viele Reisende möchten die verfügbaren Auswahlmöglichkeiten und die Zubereitung jedes Gerichts kennen, bevor sie sich entscheiden. Das gilt vor allem für Menschen mit Lebensmittelallergien oder diejenigen, die nach bestimmten diätetischen Vorgaben essen. Sie konzentrieren sich auf die Allergene sowie auf die Kalorien- und Nährwertinformationen.',
-      'Während ich nach etwas suchte, das meine Fragen tatsächlich beantwortete, fand ich <a href="https://hottomottomenu.com/" target="_blank" rel="noopener noreferrer" class="font-bold underline text-red-650 hover:text-red-700">ほっともっと メニュー</a>. Diese Seite hatte tatsächlich eine Vielzahl der Menüs von Hotto Motto, und die Listen waren leicht auf einem Handy zu lesen. Die Seite hatte außerdem gut lesbare Menüs und eine klare Navigation.',
-      'Einfache Navigation findet sich auch in den zahlreichen Filterwerkzeugen. Du kannst deine Suche auf auswählbare Menüs nach Preis, Kalorien oder Allergeninformationen anpassen. Viele Optionen enthalten Nährwertinformationen und zusätzliche hilfreiche Angaben. Das hat vielen Reisenden geholfen, ihre Entscheidungen einfach zu treffen und die vielen Bento-Optionen ohne großen Zeitaufwand zu sehen. Besonders relevant für die IT ist Ihre Fähigkeit, zwischen Management- und technischen Positionen zu unterscheiden. Nicht-IT-Vorstandsmitglieder könnten Schwierigkeiten haben zu verstehen, wie sich Management- und technische Rollen unterscheiden. Es könnte ihnen schwerfallen, sie davon zu überzeugen, dass einige Rollen auf Vorstandsebene möglicherweise mehr technische als managerial Fähigkeiten erfordern. Sie sollten auch vermeiden, anzunehmen, dass jeder ein „impliziter Theoretiker“ ist. Sie könnten Positions außerhalb ihres Bereichs nicht in Betracht ziehen. Falls sie eine neue Perspektive benötigen, müssen Sie möglicherweise überzeugend darlegen, dass die Perspektive, die sie suchen, von den Managern nicht geboten wird.',
-      'Für diejenigen, die Japan besuchen und die beliebten Bento-Gerichte von Hotto Motto ausprobieren möchten, gibt es eine äußerst praktische Option auf der Hotto Motto Menü-Webseite. Die Menüübersicht sowie die Preis- und Kalorieninformationen, Ernährungstipps, Allergiehinweise usw., zusammen mit den äußerst mobilen und benutzerfreundlichen Optionen, unterstützen die Meal-Planung erheblich, insbesondere für internationale Gäste.'
+      'McDonald’s liefert in fast allen deutschen Großstädten und Ballungsgebieten direkt an die Haustür – vor allem über den offiziellen Lieferpartner Uber Eats Deutschland. Wer dabei nicht den vollen Preis zahlen möchte, kann mit gezielten Aktionscodes kräftig sparen.',
+      'Aktuell steht der exklusive Liefer-Gutscheincode <strong>MCD2X10</strong> zur Verfügung. Dieser bietet Neukunden bei Uber Eats einen Rabatt von 2x 10 € (insgesamt 20 € Ersparnis) auf die ersten beiden McDonald\'s Lieferbestellungen. Der Code ist bis zum 31. Dezember 2026 gültig.',
+      'So löst du den Lieferservice-Code ein: Lade die offizielle Uber Eats App herunter, erstelle ein kostenloses Kundenkonto, wähle eine McDonald’s Filiale in deiner Nähe aus und lege deine Wunschmenüs in den Warenkorb. Im Bezahlprozess gibst du unter "Gutscheincode hinzufügen" den Code <strong>MCD2X10</strong> ein. Der 10-Euro-Rabatt wird sofort vom Rechnungsbetrag abgezogen.',
+      'Beachte bitte den Mindestbestellwert des jeweiligen Restaurants (meist ca. 20 €), damit der Rabatt voll angerechnet werden kann. In Kombination mit den Standard-Menüpreisen sparst du so fast 50% gegenüber dem regulären Lieferpreis!'
     ]
   },
   {
-    id: 'post-6',
-    title: 'Burger King Menü 2026 – Preise, Kalorien und aktuelle Angebote einfach vergleichen',
-    summary: 'Erfahre alles über aktuelle Burger King Preise, Kalorienwerte, Nährwertangaben und beliebte Menü-Angebote auf einen Blick.',
-    date: '2026-07-28',
-    readTime: '5 Min. Lesezeit',
-    author: 'Markus Weber (Gastro- & Fast-Food-Tester)',
-    slug: 'burger-king-menue-preise-kalorien-angebote',
+    id: 'post-3',
+    title: 'McDonald\'s PLU-Codes erklärt: So sparst du am Bestellterminal & McDrive',
+    summary: 'Was bedeuten die 3-stelligen Kassen-PLUs wie PLU 226 oder PLU 344? Erfahre, wie du Gutscheine blitzschnell ohne Papierkram am Easy Order Kiosk eintippst.',
+    date: '2026-09-28',
+    readTime: '4 Min. Lesezeit',
+    author: 'Felix Kramer (Verbraucher-Redaktion)',
+    slug: 'mcdonalds-plu-codes-sparen',
     content: [
-      'Wir haben alle Werkzeuge, die Sie benötigen, um die neuesten Burger King-Preise zu überprüfen, Kalorieninformationen anzusehen und die neuesten Angebote zu entdecken.',
-      'Da Burger King neben einer umfangreichen Burger-Auswahl auch Hähnchen-Sandwiches, Frühstück, Pommes, Desserts und Getränke anbietet, ist es zu einer der größten Fast-Food-Ketten weltweit geworden. Wenn Sie vor einem Besuch eines Einkaufszentrums eine klare Übersicht über Informationen, Preise und Nährwerte suchen, sind Sie nicht allein.',
-      'Mehrere Websites zu prüfen, um die Speisekarte mit Preisen, Details zu den beliebtesten Burgern und die Kalorienwerte zu finden, ist ärgerlich. Aus diesem Grund verwenden viele Menschen <a href="https://burgerkingsemenu.com/" target="_blank" rel="noopener noreferrer" class="font-bold underline text-red-650 hover:text-red-700">Burger King Menü</a>. Diese Seite ermöglicht es den Nutzern, die meisten Angebote in einem übersichtlichen, einfach lesbaren Format zu sehen, das mit mobilen Geräten kompatibel ist. Diese Angebote umfassen den Whopper®, Bacon King, Cheeseburger, Chicken Fries, Onion Rings und Chicken Sandwiches, unter anderem. Sie können auch Informationen zu Kids Meal, Frühstücks-, Dessert- und Getränkeoptionen finden. Menüs beinhalten ungefähre Preise und Kalorienangaben, um Ihnen bei der Auswahl zu helfen.',
-      'Ein geschäftiger Reisender oder eine Familie schätzt eine übersichtliche Menüseite. Während der Reise ist es gut, eine Vorstellung davon zu haben, welche Mahlzeiten für die Gruppe geeignet sind, und welches Menü am besten zum Budget passt. Ein ordentlich organisiertes Menü gruppiert die Optionen, um den Auswahlprozess zu erleichtern.',
-      'Schönere Menüs bieten auch rotierende, temporäre Produkte. Es ist eine gute Idee, das Menü vor der Bestellung zu prüfen. Zum Beispiel bieten Burger King Menüs ein übersichtliches Angebot an klassischen Burgern, Frühstück, Kindermahlzeiten, Beilagen und anderen Angeboten. Das macht die Navigation auf der Webseite schneller.',
-      'Kalorieninformationen sind für viele Kunden wichtig und können sogar bei der Bestellung helfen. Diese Kunden oder Gäste werden mehrere Menüs durchsehen, um die Kombination aus Geschmack und Portionsgröße zu finden, die ihre Erwartungen an eine Mahlzeit mit bester Nährstoffbilanz erfüllt. Das ist mit einer zentralisierten Informationsseite viel einfacher.',
-      'Burger King verfügt über viele Menüoptionen, die verschiedenen Vorlieben entsprechen. Für Personen, die Preise, Kalorien oder Menüpunkte bei Burger King überprüfen möchten, gibt es eine großartige Ressource im Burger King Menü. Mit hervorragender mobiler Optimierung und einfacher Navigation sammelt das Burger King Menü alle Informationen, die Sie benötigen, um Ihren nächsten Besuch bei Burger King zu planen oder einfach die neuesten Angebote auf dem Burger King Menü zu entdecken.'
+      'Jeder kennt die bunten Coupon-Bögen von McDonald’s: Auf jedem Gutscheinfeld ist eine auffällige 3- oder 4-stellige Nummer abgedruckt – der sogenannte PLU-Code (Price Look-Up Code). Doch wie funktioniert dieser Code technisch und wie nutzt man ihn am besten?',
+      'Kassensysteme in der Gastronomie nutzen PLU-Nummern zur eindeutigen Artikel- und Rabattidentifikation. Anstatt lange Produktkombinationen manuell einzugeben, tippt das Kassenpersonal einfach "PLU 226" ein – und die Kasse bucht automatisch zwei Big Macs zum reduzierten Doppelpack-Aktionspreis ein.',
+      'Am beliebten Easy Order Touchscreen-Terminal (den großen Stehkiosken im Restaurant) musst du oft nicht einmal den Barcode scannen. Wähle im oberen Menüband einfach die Rubrik "Gutscheine & Coupons" oder "Coupon-Code eingeben" und gib die Ziffern per Tastatur ein. Das spart Wartezeit und funktioniert auch, wenn dein Smartphone-Display zerkratzt ist oder das Handynetz im Restaurant schwach ist.',
+      'Wichtig für Sparfüchse: Prüfe vor dem Bezahlen die Gesamtsumme auf dem Bildschirm. Die meisten McDonald\'s Filialen in Deutschland nehmen an den nationalen Coupon-Aktionen teil, doch einzelne Franchise-Standorte an Bahnhöfen oder Flughäfen können abweichen.'
     ]
   }
 ];
@@ -55,18 +51,22 @@ export const BlogPosts: BlogPost[] = [
 export const FAQS = [
   {
     question: "Wo sind die aktuellen McDonald's-Gutscheine?",
-    answer: "Die neuesten Gutscheine erhalten Sie in gedruckten Couponheften, die ein- bis mehrmals jährlich an Haushalte im ganzen Land verteilt werden, in der offiziellen McDonald's Smartphone-App oder auf zuverlässigen Portalen wie mcdonaldsgutscheine.de, wo wir aktuelle Aktionen, Angebote und PLU-Codes sammeln."
+    answer: "Die neuesten Gutscheine erhalten Sie in gedruckten Couponheften, in der offiziellen McDonald's Smartphone-App oder auf zuverlässigen Verbraucherportalen wie mcdonaldsgutscheine.de, wo wir aktuelle Rabattaktionen, Liefergutscheine und Kassen-PLU-Codes sammeln."
   },
   {
     question: "Was ist der PLU-Code bei McDonald's?",
-    answer: "Ein PLU-Code (Price Lookup Code) is eine kurze Nummer (z.B. PLU 482), die vom Kassensystem verwendet wird, um den zu gewährenden Rabatt bei einem McDonald's-Produkt zu bestimmen. Sie können den Code dem McDonald's-Mitarbeiter an der Kasse oder im McDrive oder beim Bestellkiosk mitteilen."
+    answer: "Ein PLU-Code (Price Lookup Code) ist eine kurze Nummer (z.B. PLU 226 oder PLU 344), die vom Kassensystem verwendet wird, um den zu gewährenden Rabatt bei einem McDonald's-Menü zu bestimmen. Sie können den Code am Bestellkiosk eingeben oder dem Mitarbeiter an Kasse und McDrive mitteilen."
+  },
+  {
+    question: "Gibt es Gutscheine für den McDonald's Lieferservice?",
+    answer: "Ja! Für Lieferbestellungen über Uber Eats Deutschland gibt es z.B. den Aktionscode MCD2X10, mit dem Neukunden 2x 10 € Rabatt auf die ersten beiden Lieferungen erhalten (gültig bis 31. Dezember 2026)."
   },
   {
     question: "Sind die Gutscheine in ganz Deutschland gültig?",
-    answer: "Die meisten landesweiten Gutscheinaktionen sind in allen teilnehmenden McDonald's-Restaurants in Deutschland gültig. Einige Lizenznehmer (Franchise-Nehmer) behalten sich das Recht vor, an ihren Restaurants nicht an allen Rabattaktionen teilzunehmen. Der sicherste Standort ist ein Restaurant in einer Großstadt oder direkt an der Autobahn."
+    answer: "Die meisten landesweiten Gutscheinaktionen sind in allen teilnehmenden McDonald's-Restaurants in Deutschland gültig. Einige Franchise-Nehmer (z.B. an Bahnhöfen oder Flughäfen) behalten sich das Recht vor, an ihren Standorten nicht an allen Rabattaktionen teilzunehmen."
   },
   {
     question: "Gibt es auch dauerhaft gültige Gutscheine oder Rabatte?",
-    answer: "Ja, in der McDonald's-App gibt es ein dauerhaftes Treueprogramm, bei dem Sie Punkte sammeln können, die gegen kostenlose Belohnungen eingelöst werden können. Außerdem erhalten Sie bei der Abgabe des Gästefeedbacks auf mcdonalds-evaluiert.de fast jedes Mal einen universellen Gutschein für ein kostenloses Heißgetränk, Softdrink oder kleine Pommes."
+    answer: "Ja, im Treueprogramm der McDonald's-App sammeln Sie mit jedem Einkauf Punkte, die gegen Gratis-Speisen eingetauscht werden können. Außerdem erhalten Sie bei der Abgabe des Gästefeedbacks auf mcdonalds-evaluiert.de fast immer einen Code für ein Heißgetränk, Softdrink oder eine kleine Pommes."
   }
 ];

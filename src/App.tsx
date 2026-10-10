@@ -61,46 +61,73 @@ export default function App() {
     setCurrentPath(targetPath);
   };
 
-  // Dynamic SEO Page Meta title write
+  // Canonical slug redirection (old German slugs redirect to new English slugs requested by user)
   useEffect(() => {
-    let title = "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote";
-    let desc = "Spare clever bei Burgern, Menüs und Desserts.";
+    const norm = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+    if (norm === '/datenschutz/' || norm === '/privacy/') {
+      window.history.replaceState(null, '', '/privacy-policy/');
+      setCurrentPath('/privacy-policy/');
+    } else if (norm === '/kontakt/' || norm === '/contact-us/') {
+      window.history.replaceState(null, '', '/contact/');
+      setCurrentPath('/contact/');
+    } else if (norm === '/ueber-uns/' || norm === '/about/') {
+      window.history.replaceState(null, '', '/about-us/');
+      setCurrentPath('/about-us/');
+    }
+  }, [currentPath]);
 
-    if (currentPath === '/') {
-      title = "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote";
-      desc = "Finde aktuelle McDonald's Gutscheine, Coupons und Angebote. Spare bei Burgern, Menüs, McFlurry und mehr.";
-    } else if (currentPath === '/gutscheine/') {
+  // Dynamic SEO Page Meta title & Canonical write
+  useEffect(() => {
+    let title = "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote Deutschland";
+    let desc = "Tagesaktuelle McDonald's Gutscheine, Coupons und Angebote für Deutschland. Spare bei Burgern, Menüs, McFlurry & mit Uber Eats Liefercode MCD2X10.";
+
+    const norm = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+
+    if (norm === '/' || norm === '/index.html/') {
+      title = "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote Deutschland";
+      desc = "Finde aktuelle McDonald's Gutscheine, Coupons und Angebote für Deutschland. Spare bei Burgern, Menüs, McFlurry und mit Uber Eats Code MCD2X10.";
+    } else if (norm === '/gutscheine/') {
       title = "McDonald's Gutscheine 2026 – Alle Coupons & Sparcodes";
-      desc = "Vollständige Übersicht aller einlösbaren McDonald's Gutscheincodes in Deutschland.";
-    } else if (currentPath === '/app-gutscheine/') {
+      desc = "Vollständige Übersicht aller einlösbaren McDonald's Gutscheincodes und Kassen-PLUs in Deutschland.";
+    } else if (norm === '/app-gutscheine/') {
       title = "McDonald's App Coupons – Exklusive Smartphone-Rabatte";
       desc = "Spare bis zu 50% mit exklusiven App-Coupons und unserem MyMcDonald's Treuepunkte Guide.";
-    } else if (currentPath === '/happy-meal-angebote/') {
+    } else if (norm === '/happy-meal-angebote/') {
       title = "Happy Meal Angebote & Spielzeuge – Familientarife";
       desc = "Entdecke das Happy Meal mit günstigen Kombi-Vorteilen und Preisnachlässen für Familien.";
-    } else if (currentPath === '/burger-angebote/') {
+    } else if (norm === '/burger-angebote/') {
       title = "McDonald's Burger Angebote & Coupons im Einzelkauf";
       desc = "Spare bei Big Mac, Double Cheeseburger, Royal Käse und weiteren Klassikern.";
-    } else if (currentPath === '/fruehstueck-angebote/') {
+    } else if (norm === '/fruehstueck-angebote/') {
       title = "McDonald's Frühstück Angebote (Morgen-Gutscheine)";
       desc = "Günstige Heißgetränke und McMuffins vor 10:30 Uhr einlösen.";
-    } else if (currentPath === '/mccafe-angebote/') {
+    } else if (norm === '/mccafe-angebote/') {
       title = "McCafé Angebote, Kuchen & Heißgetränke Gutscheine";
       desc = "Kombipreise für Muffins, Cookies, Donuts und aromatischen Café Latte Macchiato.";
-    } else if (currentPath === '/angebote/') {
+    } else if (norm === '/angebote/') {
       title = "McDonald's Angebote & Rabattaktionen diese Woche";
       desc = "Wöchentliche Sonderaktionen, Ostercodes und Rabattpyramiden.";
-    } else if (currentPath.startsWith('/blog/')) {
+    } else if (norm.startsWith('/blog/')) {
       title = "Sparportal Blog – Expertenratgeber für McDonald's Deutschland";
-      desc = "Lese echte Praxistests und nützliche Hacks, um bei der Bestellung Geld zu sparen.";
-    } else if (currentPath === '/ueber-uns/') {
+      desc = "Lese echte Praxistests und nützliche Hacks, um bei der McDonald's Bestellung Geld zu sparen.";
+    } else if (norm === '/about-us/' || norm === '/ueber-uns/' || norm === '/about/') {
       title = "Über Uns – mcdonaldsgutscheine.de";
-    } else if (currentPath === '/kontakt/') {
-      title = "Support & Kontaktformular – mcdonaldsgutscheine.de";
-    } else if (currentPath === '/impressum/') {
-      title = "Impressum gem. §5 TMG – mcdonaldsgutscheine.de";
-    } else if (currentPath === '/datenschutz/') {
-      title = "Datenschutzerklärung (DSGVO & AdSense) – mcdonaldsgutscheine.de";
+      desc = "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland.";
+    } else if (norm === '/contact/' || norm === '/kontakt/' || norm === '/contact-us/') {
+      title = "Kontakt & Support – mcdonaldsgutscheine.de";
+      desc = "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland.";
+    } else if (norm === '/impressum/' || norm === '/imprint/') {
+      title = "Impressum gem. § 5 TMG – mcdonaldsgutscheine.de";
+      desc = "Gesetzliches Impressum mit allen Angaben nach § 5 TMG für mcdonaldsgutscheine.de.";
+    } else if (norm === '/privacy-policy/' || norm === '/datenschutz/' || norm === '/privacy/') {
+      title = "Datenschutzerklärung – mcdonaldsgutscheine.de";
+      desc = "Ausführliche Datenschutzerklärung (DSGVO & Google AdSense Programm-Richtlinien) für unser Sparportal.";
+    } else if (norm === '/cookies/') {
+      title = "Cookie-Richtlinie – mcdonaldsgutscheine.de";
+      desc = "Informationen über die Verwendung von Cookies und Werbeeinstellungen.";
+    } else if (norm === '/gutscheine-pdf-download/') {
+      title = "McDonald's Gutscheine PDF-Download & Bonusbuch 2026";
+      desc = "Lade das offizielle McDonald's Bonusbuch & Coupon-Heft 2026 (A4 PDF) herunter und spare offline!";
     }
 
     document.title = title;
@@ -113,6 +140,22 @@ export default function App() {
       document.head.appendChild(metaDesc);
     }
     metaDesc.setAttribute('content', desc);
+
+    // Compute canonical path
+    let canonicalPath = norm;
+    if (norm === '/datenschutz/' || norm === '/privacy/') canonicalPath = '/privacy-policy/';
+    if (norm === '/kontakt/' || norm === '/contact-us/') canonicalPath = '/contact/';
+    if (norm === '/ueber-uns/' || norm === '/about/') canonicalPath = '/about-us/';
+    if (norm === '/imprint/') canonicalPath = '/impressum/';
+
+    // Inject or update canonical link
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', `https://www.mcdonaldsgutscheine.de${canonicalPath}`);
   }, [currentPath]);
 
   // Shopping cart helper logic for Calculator tray
@@ -174,12 +217,21 @@ export default function App() {
         '/angebote/',
         '/blog/',
         '/ueber-uns/',
+        '/about/',
+        '/about-us/',
         '/kontakt/',
+        '/contact/',
+        '/contact-us/',
         '/datenschutz/',
+        '/privacy/',
+        '/privacy-policy/',
         '/impressum/',
+        '/imprint/',
         '/cookies/',
         '/haftungsausschluss/',
+        '/disclaimer/',
         '/nutzungsbedingungen/',
+        '/terms/',
         '/gutscheine-pdf-download/'
       ];
 
@@ -199,6 +251,8 @@ export default function App() {
     if (!isPathValid(currentPath)) {
       return <NotFound setPath={setPath} />;
     }
+
+    const norm = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
 
     // Check if we are viewing a search query
     if (searchQuery.trim().length > 0) {
@@ -247,7 +301,7 @@ export default function App() {
     }
 
     // Standard Router selection
-    if (currentPath === '/' || currentPath === '/index.html') {
+    if (norm === '/' || norm === '/index.html/') {
       return (
         <Home
           setPath={setPath}
@@ -262,15 +316,15 @@ export default function App() {
 
     // Category Routes
     if (
-      currentPath === '/gutscheine/' ||
-      currentPath === '/app-gutscheine/' ||
-      currentPath === '/happy-meal-angebote/' ||
-      currentPath === '/fruehstueck-angebote/' ||
-      currentPath === '/burger-angebote/' ||
-      currentPath === '/mccafe-angebote/' ||
-      currentPath === '/angebote/'
+      norm === '/gutscheine/' ||
+      norm === '/app-gutscheine/' ||
+      norm === '/happy-meal-angebote/' ||
+      norm === '/fruehstueck-angebote/' ||
+      norm === '/burger-angebote/' ||
+      norm === '/mccafe-angebote/' ||
+      norm === '/angebote/'
     ) {
-      const slug = currentPath.replace(/^\//, '').replace(/\/$/, '');
+      const slug = norm.replace(/^\//, '').replace(/\/$/, '');
       return (
         <CategoryPage
           categorySlug={slug}
@@ -281,34 +335,34 @@ export default function App() {
     }
 
     // Blog Routes
-    if (currentPath === '/blog/' || currentPath.startsWith('/blog/')) {
+    if (norm === '/blog/' || norm.startsWith('/blog/')) {
       return <Blog currentPath={currentPath} setPath={setPath} />;
     }
 
     // Legal Routes
-    if (currentPath === '/ueber-uns/') {
-      return <Legal pageType="ueber-uns" setPath={setPath} />;
+    if (norm === '/about-us/' || norm === '/ueber-uns/' || norm === '/about/') {
+      return <Legal pageType="about-us" setPath={setPath} />;
     }
-    if (currentPath === '/kontakt/') {
-      return <Legal pageType="kontakt" setPath={setPath} />;
+    if (norm === '/contact/' || norm === '/kontakt/' || norm === '/contact-us/') {
+      return <Legal pageType="contact" setPath={setPath} />;
     }
-    if (currentPath === '/datenschutz/') {
-      return <Legal pageType="datenschutz" setPath={setPath} />;
+    if (norm === '/privacy-policy/' || norm === '/datenschutz/' || norm === '/privacy/') {
+      return <Legal pageType="privacy-policy" setPath={setPath} />;
     }
-    if (currentPath === '/impressum/') {
+    if (norm === '/impressum/' || norm === '/imprint/') {
       return <Legal pageType="impressum" setPath={setPath} />;
     }
-    if (currentPath === '/cookies/') {
+    if (norm === '/cookies/') {
       return <Legal pageType="cookies" setPath={setPath} />;
     }
-    if (currentPath === '/haftungsausschluss/') {
+    if (norm === '/haftungsausschluss/' || norm === '/disclaimer/') {
       return <Legal pageType="haftungsausschluss" setPath={setPath} />;
     }
-    if (currentPath === '/nutzungsbedingungen/') {
+    if (norm === '/nutzungsbedingungen/' || norm === '/terms/') {
       return <Legal pageType="nutzungsbedingungen" setPath={setPath} />;
     }
 
-    if (currentPath === '/gutscheine-pdf-download/') {
+    if (norm === '/gutscheine-pdf-download/') {
       return <PdfDownloads setPath={setPath} />;
     }
 

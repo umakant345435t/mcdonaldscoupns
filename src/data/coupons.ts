@@ -1,6 +1,22 @@
 import { Coupon } from '../types';
 
 export const McDonaldCoupons: Coupon[] = [
+  // Exklusiver Lieferservice Deal (Deutschland)
+  {
+    id: 'uber-eats-mcd2x10',
+    title: 'MCD2X10: 2x 10 € Rabatt auf McDonald’s (Uber Eats Deutschland)',
+    description: 'Spare 2x 10 € (insgesamt 20 €) auf deine ersten beiden McDonald\'s Lieferbestellungen über Uber Eats Deutschland. Gutscheincode direkt beim Bezahlen in der Uber Eats App eingeben.',
+    discountValue: '20.00€ Rabatt (2x 10€)',
+    originalPrice: 40.00,
+    couponPrice: 20.00,
+    code: 'MCD2X10',
+    category: 'gutscheine',
+    expiryDate: '2026-12-31',
+    verified: true,
+    likes: 924,
+    dislikes: 2,
+    isAppRequired: true,
+  },
   // Burger Angebote
   {
     id: 'b1',
