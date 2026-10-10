@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CookieBanner from './components/CookieBanner';
 import CouponCard from './components/CouponCard';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
@@ -64,7 +63,7 @@ export default function App() {
   // Canonical slug redirection (old German slugs redirect to new English slugs requested by user)
   useEffect(() => {
     const norm = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
-    if (norm === '/datenschutz/' || norm === '/privacy/') {
+    if (norm === '/datenschutz/' || norm === '/privacy/' || norm === '/cookies/') {
       window.history.replaceState(null, '', '/privacy-policy/');
       setCurrentPath('/privacy-policy/');
     } else if (norm === '/kontakt/' || norm === '/contact-us/') {
@@ -122,9 +121,6 @@ export default function App() {
     } else if (norm === '/privacy-policy/' || norm === '/datenschutz/' || norm === '/privacy/') {
       title = "Datenschutzerklärung – mcdonaldsgutscheine.de";
       desc = "Ausführliche Datenschutzerklärung (DSGVO & Google AdSense Programm-Richtlinien) für unser Sparportal.";
-    } else if (norm === '/cookies/') {
-      title = "Cookie-Richtlinie – mcdonaldsgutscheine.de";
-      desc = "Informationen über die Verwendung von Cookies und Werbeeinstellungen.";
     } else if (norm === '/gutscheine-pdf-download/') {
       title = "McDonald's Gutscheine PDF-Download & Bonusbuch 2026";
       desc = "Lade das offizielle McDonald's Bonusbuch & Coupon-Heft 2026 (A4 PDF) herunter und spare offline!";
@@ -346,14 +342,11 @@ export default function App() {
     if (norm === '/contact/' || norm === '/kontakt/' || norm === '/contact-us/') {
       return <Legal pageType="contact" setPath={setPath} />;
     }
-    if (norm === '/privacy-policy/' || norm === '/datenschutz/' || norm === '/privacy/') {
+    if (norm === '/privacy-policy/' || norm === '/datenschutz/' || norm === '/privacy/' || norm === '/cookies/') {
       return <Legal pageType="privacy-policy" setPath={setPath} />;
     }
     if (norm === '/impressum/' || norm === '/imprint/') {
       return <Legal pageType="impressum" setPath={setPath} />;
-    }
-    if (norm === '/cookies/') {
-      return <Legal pageType="cookies" setPath={setPath} />;
     }
     if (norm === '/haftungsausschluss/' || norm === '/disclaimer/') {
       return <Legal pageType="haftungsausschluss" setPath={setPath} />;
@@ -396,9 +389,6 @@ export default function App() {
 
       {/* Dynamic Legal & Informative Footer */}
       <Footer setPath={setPath} currentPath={currentPath} />
-
-      {/* DSGVO Consent manager popover */}
-      <CookieBanner />
     </div>
   );
 }

@@ -13,7 +13,6 @@ export type LegalPageType =
   | 'privacy-policy'
   | 'impressum'
   | 'imprint'
-  | 'cookies'
   | 'haftungsausschluss'
   | 'disclaimer'
   | 'nutzungsbedingungen'
@@ -38,7 +37,6 @@ export default function Legal({ pageType, setPath }: LegalProps) {
   const isContact = pageType === 'kontakt' || pageType === 'contact' || pageType === 'contact-us';
   const isPrivacy = pageType === 'datenschutz' || pageType === 'privacy' || pageType === 'privacy-policy';
   const isImprint = pageType === 'impressum' || pageType === 'imprint';
-  const isCookies = pageType === 'cookies';
   const isDisclaimer = pageType === 'haftungsausschluss' || pageType === 'disclaimer';
   const isTerms = pageType === 'nutzungsbedingungen' || pageType === 'terms';
 
@@ -418,34 +416,6 @@ export default function Legal({ pageType, setPath }: LegalProps) {
               <h3 className="text-base font-bold text-gray-900">Streitschlichtung:</h3>
               <p>
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-red-650 underline">https://ec.europa.eu/consumers/odr/</a>. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-              </p>
-            </div>
-          )}
-
-          {/* ========================================================================= */}
-          {/* COOKIES */}
-          {/* ========================================================================= */}
-          {isCookies && (
-            <div className="space-y-6 text-xs text-gray-650 leading-relaxed">
-              <div className="border-b border-gray-100 pb-4">
-                <span className="text-xs font-bold text-red-650 tracking-wider uppercase">Cookie-Richtlinie</span>
-                <h1 className="text-3xl font-black text-gray-900 tracking-tight mt-1">
-                  Cookie-Richtlinie
-                </h1>
-              </div>
-
-              <p>
-                Diese Richtlinie erläutert die Verwendung von Cookies und ähnlichen Webtechnologien auf mcdonaldsgutscheine.de.
-              </p>
-
-              <h3 className="text-base font-bold text-gray-900">Was sind Cookies?</h3>
-              <p>
-                Cookies sind kleine Textdateien, die beim Besuch einer Internetseite auf deinem Endgerät gespeichert werden. Sie dienen dazu, Basisfunktionalitäten bereitzustellen (z.B. den Status deines Spar-Rechners oder deine Auswahl im Cookie-Banner zu speichern) sowie die Schaltung von Werbung (z.B. Google AdSense) zu ermöglichen.
-              </p>
-
-              <h3 className="text-base font-bold text-gray-900">Cookie-Einstellungen verwalten</h3>
-              <p>
-                Du kannst deine Cookie-Einstellungen jederzeit anpassen oder widerrufen, indem du den Cache bzw. die Cookies in deinem Browser löschst. Unser Einverständnis-Banner erscheint dann automatisch erneut beim nächsten Besuch.
               </p>
             </div>
           )}

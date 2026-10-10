@@ -121,12 +121,6 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
               Datenschutz
             </button>
             <button
-              onClick={() => handleNavClick('/cookies/')}
-              className={`hover:text-white transition-all cursor-pointer ${currentPath === '/cookies/' ? 'text-yellow-400 font-bold' : ''}`}
-            >
-              Cookie-Richtlinie
-            </button>
-            <button
               onClick={() => handleNavClick('/nutzungsbedingungen/')}
               className={`hover:text-white transition-all cursor-pointer ${currentPath === '/nutzungsbedingungen/' || currentPath === '/terms/' ? 'text-yellow-400 font-bold' : ''}`}
             >

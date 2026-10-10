@@ -37,7 +37,6 @@ const routes = [
   '/privacy-policy/',
   '/impressum/',
   '/imprint/',
-  '/cookies/',
   '/haftungsausschluss/',
   '/nutzungsbedingungen/',
   '/terms/',
@@ -137,10 +136,6 @@ const pageMeta = {
   '/imprint/': {
     title: "Legal Notice / Impressum – mcdonaldsgutscheine.de",
     desc: "Statutory legal information according to § 5 TMG for mcdonaldsgutscheine.de."
-  },
-  '/cookies/': {
-    title: "Cookie-Richtlinie – mcdonaldsgutscheine.de",
-    desc: "Informationen über die Verwendung von Cookies und Werbeeinstellungen auf unserer Plattform."
   },
   '/haftungsausschluss/': {
     title: "Haftungsausschluss & rechtliche Hinweise – mcdonaldsgutscheine.de",
