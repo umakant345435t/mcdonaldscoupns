@@ -55,139 +55,223 @@ blogSlugs.forEach(slug => {
   routes.push(`/blog/${slug}/`);
 });
 
-// Dynamic metadata database for physical pages
+// Dynamic metadata database for physical pages (High-Intent German SEO Keywords)
 const pageMeta = {
   '/': {
-    title: "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote Deutschland",
-    desc: "Tagesaktuelle McDonald's Gutscheine & Coupons für Deutschland. Spare mit Kassen-PLUs, MyMcDonald's App & Uber Eats Liefer-Code MCD2X10."
+    title: "McDonald's Gutscheine 2026 – Aktuelle Coupons, PLU-Codes & PDF Deutschland",
+    desc: "Tagesaktuelle McDonald's Gutscheine & Coupons 2026 für Deutschland. Spare bis zu 50% mit Kassen-PLU-Codes, Bonusbuch PDF-Download, MyMcDonald's App & 20€ Uber Eats Code MCD2X10!",
+    keywords: "McDonald's Gutscheine, McDonalds Gutscheine 2026, McDonald's Coupons aktuell, McDonald's PLU Codes Liste, McDonalds Gutschein PDF Download, McDonald's Deutschland Rabatt, Big Mac Gutschein, McFlurry Coupon, 20er Chicken McNuggets Gutschein, Uber Eats McDonalds Gutschein MCD2X10"
   },
   '/gutscheine/': {
-    title: "McDonald's Gutscheine 2026 – Alle Coupons & Sparcodes",
-    desc: "Vollständige Übersicht aller einlösbaren McDonald's Gutscheincodes in Deutschland."
+    title: "McDonald's Gutscheine 2026 – Alle aktuellen Coupons & PLU-Codes Liste",
+    desc: "Vollständige Liste aller einlösbaren McDonald's Gutscheincodes & 3-stelligen Kassen-PLUs 2026 in Deutschland. Direkt am Bestellterminal, McDrive oder an der Kasse sparen!",
+    keywords: "McDonald's Gutscheine 2026, alle McDonalds Coupons, McDonald's PLU Codes Liste, Kassen Codes McDonald's, McDrive Gutscheine, Bestellterminal Code"
   },
   '/app-gutscheine/': {
-    title: "McDonald's App Coupons – Exklusive Smartphone-Rabatte",
-    desc: "Spare bis zu 50% mit exklusiven App-Coupons und unserem MyMcDonald's Treuepunkte Guide."
+    title: "McDonald's App Gutscheine 2026 – Exklusive MyMcDonald's Coupons & Punkte",
+    desc: "Spare bis zu 50% mit exklusiven McDonald's App-Gutscheinen, QR-Codes und unserem MyMcDonald's Bonusprogramm Guide für Gratis-Prämien in Deutschland.",
+    keywords: "McDonald's App Gutscheine, MyMcDonald's Coupons, McDonald's App Rabatte, MyMcDonald's Punkte einlösen, QR Code Gutschein McDonald's"
   },
   '/happy-meal-angebote/': {
-    title: "Happy Meal Angebote & Spielzeuge – Familientarife",
-    desc: "Entdecke das Happy Meal mit günstigen Kombi-Vorteilen und Preisnachlässen für Familien."
+    title: "McDonald's Happy Meal Gutscheine 2026 – Familien-Coupons & Spielzeug",
+    desc: "Aktuelle McDonald's Happy Meal Gutscheine & Familien-Angebote 2026 in Deutschland. Spare mit Kombi-Coupons inklusive Hauptspeise, Beilage, Getränk und Spielzeug oder Buch.",
+    keywords: "Happy Meal Gutschein, McDonald's Familien Coupons, Happy Meal Angebot Preis, Happy Meal Spielzeug aktuell, McDonald's Kinder Menü Rabatt"
   },
   '/burger-angebote/': {
-    title: "McDonald's Burger Angebote & Coupons im Einzelkauf",
-    desc: "Spare bei Big Mac, Double Cheeseburger, Royal Käse und weiteren Klassikern."
+    title: "McDonald's Burger Gutscheine 2026 – Big Mac, Royal TS & 2-für-1 Coupons",
+    desc: "Spare bei Big Mac, Hamburger Royal TS, Double Cheeseburger, McChicken und 20er Chicken McNuggets mit aktuellen 2-für-1 Burger Gutscheinen & McMenü Coupons.",
+    keywords: "Big Mac Gutschein, McDonald's Burger Angebote, 2 für 1 McDonald's Coupon, 20er Chicken McNuggets Gutschein, Hamburger Royal TS Rabatt, McMenü Gutschein"
   },
   '/fruehstueck-angebote/': {
-    title: "McDonald's Frühstück Angebote (Morgen-Gutscheine)",
-    desc: "Günstige Heißgetränke und McMuffins vor 10:30 Uhr einlösen."
+    title: "McDonald's Frühstück Gutscheine 2026 – McMuffin & Kaffee Coupons",
+    desc: "Günstige McDonald's Frühstück Gutscheine vor 10:30 Uhr: Spare bei McMuffin Bacon & Egg, Rührei, Croissants und Café-Spezialitäten in allen teilnehmenden Filialen.",
+    keywords: "McDonald's Frühstück Gutscheine, McMuffin Coupon, McDonald's Frühstück Zeiten Preise, Kaffee Gutschein McDonald's"
   },
   '/mccafe-angebote/': {
-    title: "McCafé Angebote, Kuchen & Heißgetränke Gutscheine",
-    desc: "Kombipreise für Muffins, Cookies, Donuts und aromatischen Café Latte Macchiato."
+    title: "McCafé Gutscheine 2026 – Kaffee, Kuchen, McFlurry & Dessert Coupons",
+    desc: "Aktuelle McCafé Gutscheine & Dessert-Coupons für Deutschland: Kombipreise für Latte Macchiato, Cappuccino, Muffins, Cookies, Donuts und McFlurry.",
+    keywords: "McCafé Gutscheine, McFlurry Gutschein, McDonald's Kaffee Coupon, Kuchen & Dessert Rabatt McDonald's"
   },
   '/angebote/': {
-    title: "McDonald's Angebote & Rabattaktionen diese Woche",
-    desc: "Wöchentliche Sonderaktionen, Ostercodes und Rabattpyramiden."
+    title: "McDonald's Angebote diese Woche – Aktuelle Aktionen & Rabatte 2026",
+    desc: "Alle McDonald's Angebote dieser Woche im Überblick: Saisonale Sonderaktionen, McSmart Menü Deals, Oster- & Sommer-Coupons sowie Lieferservice-Rabatte.",
+    keywords: "McDonald's Angebote diese Woche, McDonald's Aktion aktuell, McSmart Menü Preis, McDonald's Wochenangebote Deutschland"
   },
   '/blog/': {
-    title: "Sparportal Blog – Expertenratgeber für McDonald's Deutschland",
-    desc: "Lese echte Praxistests und nützliche Hacks, um bei der Bestellung Geld zu sparen."
+    title: "McDonald's Spar-Ratgeber & Insider-Tricks – Blog Deutschland",
+    desc: "Echte Praxistests, PLU-Code-Listen, Kassenbon-Tricks und Schritt-für-Schritt-Anleitungen zum Sparen bei McDonald's in Deutschland.",
+    keywords: "McDonald's Spartipps, McDonald's Tricks, Kassenbon Gratis Getränk McDonald's, PLU Codes Anleitung"
   },
   '/ueber-uns/': {
     title: "Über Uns / About Us – mcdonaldsgutscheine.de",
-    desc: "Über mcdonaldsgutscheine.de: Dein unabhängiges Verbraucherportal für aktuelle Sparaktionen in Deutschland."
+    desc: "Über mcdonaldsgutscheine.de: Dein unabhängiges Verbraucherportal für tagesaktuelle McDonald's Sparaktionen und PLU-Codes in Deutschland.",
+    keywords: "mcdonaldsgutscheine.de, Über uns, Verbraucherportal Fast Food Deutschland"
   },
   '/about/': {
     title: "Über Uns (About Us) – mcdonaldsgutscheine.de",
-    desc: "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland."
+    desc: "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland.",
+    keywords: "mcdonaldsgutscheine.de, About Us, McDonald's Sparportal"
   },
   '/about-us/': {
     title: "Über Uns – mcdonaldsgutscheine.de",
-    desc: "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland."
+    desc: "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland.",
+    keywords: "mcdonaldsgutscheine.de, Über Uns, Unabhängiges Verbraucherportal"
   },
   '/kontakt/': {
     title: "Kontakt & Support – mcdonaldsgutscheine.de",
-    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheinen."
+    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheinen.",
+    keywords: "Kontakt mcdonaldsgutscheine.de, Redaktion Support"
   },
   '/contact/': {
     title: "Kontakt & Support – mcdonaldsgutscheine.de",
-    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland."
+    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland.",
+    keywords: "Kontakt mcdonaldsgutscheine.de, Support"
   },
   '/contact-us/': {
     title: "Kontakt & Support – mcdonaldsgutscheine.de",
-    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland."
+    desc: "Kontaktiere unser Redaktionsteam bei Fragen, Feedback oder Hinweisen zu neuen Gutscheincodes für McDonald's Deutschland.",
+    keywords: "Kontakt mcdonaldsgutscheine.de, Support"
   },
   '/datenschutz/': {
     title: "Datenschutzerklärung (Privacy Policy) – mcdonaldsgutscheine.de",
-    desc: "Ausführliche Datenschutzerklärung (DSGVO & Google AdSense Richtlinien) für unser Sparportal."
+    desc: "Ausführliche Datenschutzerklärung (DSGVO & Google AdSense Richtlinien) für unser Sparportal.",
+    keywords: "Datenschutzerklärung, DSGVO, Privacy Policy"
   },
   '/privacy/': {
     title: "Datenschutzerklärung (Privacy Policy) – mcdonaldsgutscheine.de",
-    desc: "Ausführliche Datenschutzerklärung gemäß DSGVO & Google AdSense Programm-Richtlinien für unser Sparportal."
+    desc: "Ausführliche Datenschutzerklärung gemäß DSGVO & Google AdSense Programm-Richtlinien für unser Sparportal.",
+    keywords: "Datenschutzerklärung, Privacy Policy"
   },
   '/privacy-policy/': {
     title: "Datenschutzerklärung – mcdonaldsgutscheine.de",
-    desc: "Ausführliche Datenschutzerklärung gemäß DSGVO & Google AdSense Programm-Richtlinien für unser Sparportal."
+    desc: "Ausführliche Datenschutzerklärung gemäß DSGVO & Google AdSense Programm-Richtlinien für unser Sparportal.",
+    keywords: "Datenschutzerklärung, Privacy Policy, DSGVO"
   },
   '/impressum/': {
-    title: "Impressum gem. §5 TMG – mcdonaldsgutscheine.de",
-    desc: "Gesetzliches Impressum mit allen Angaben nach § 5 TMG für mcdonaldsgutscheine.de."
+    title: "Impressum gem. § 5 TMG – mcdonaldsgutscheine.de",
+    desc: "Gesetzliches Impressum mit allen Angaben nach § 5 TMG und § 18 MStV für mcdonaldsgutscheine.de.",
+    keywords: "Impressum, § 5 TMG, Rechtliche Angaben"
   },
   '/imprint/': {
     title: "Legal Notice / Impressum – mcdonaldsgutscheine.de",
-    desc: "Statutory legal information according to § 5 TMG for mcdonaldsgutscheine.de."
+    desc: "Statutory legal information according to § 5 TMG for mcdonaldsgutscheine.de.",
+    keywords: "Impressum, Imprint"
   },
   '/haftungsausschluss/': {
-    title: "Haftungsausschluss & rechtliche Hinweise – mcdonaldsgutscheine.de",
-    desc: "Haftungsausschluss für redaktionelle Inhalte, externe Links und Markenrecht."
+    title: "Haftungsausschluss & Markenrecht – mcdonaldsgutscheine.de",
+    desc: "Haftungsausschluss für redaktionelle Inhalte, Preisangaben, externe Links und Markenrecht.",
+    keywords: "Haftungsausschluss, Disclaimer"
   },
   '/nutzungsbedingungen/': {
     title: "Nutzungsbedingungen – mcdonaldsgutscheine.de",
-    desc: "Allgemeine Geschäfts- und Nutzungsbedingungen für die Verwendung unseres Portals."
+    desc: "Allgemeine Geschäfts- und Nutzungsbedingungen für die kostenfreie Verwendung unseres Gutschein-Portals.",
+    keywords: "Nutzungsbedingungen, AGB"
   },
   '/terms/': {
     title: "Terms of Service – mcdonaldsgutscheine.de",
-    desc: "Terms of service and acceptable use for mcdonaldsgutscheine.de."
+    desc: "Terms of service and acceptable use for mcdonaldsgutscheine.de.",
+    keywords: "Terms of Service, Nutzungsbedingungen"
   },
   '/gutscheine-pdf-download/': {
-    title: "McDonald's Gutscheine PDF-Download & Bonusbuch 2026",
-    desc: "Lade das offizielle McDonald's Bonusbuch & Coupon-Heft 2026 (A4 PDF) herunter und spare offline im Restaurant!"
+    title: "McDonald's Gutscheine PDF Download 2026 – Bonusbuch zum Ausdrucken",
+    desc: "Lade das aktuelle McDonald's Bonusbuch & Coupon-Heft 2026 kostenlos als DIN-A4 PDF herunter. Alle Gutscheine & PLU-Codes zum Ausdrucken oder fürs Smartphone!",
+    keywords: "McDonald's Gutscheine PDF, McDonald's Bonusbuch 2026 PDF Download, McDonald's Coupons zum Ausdrucken, Gutscheinbogen PDF"
   },
   '/blog/mcdonalds-treueprogramm-erklaert/': {
-    title: "McDonald’s Treueprogramm erklärt: Prämien & MyMcDonalds Points",
-    desc: "Punkte sammeln wie die Weltmeister und umsonst Burger essen? Erfahre ganz genau, wie das MyMcDonald’s Prämienprogramm abläuft."
+    title: "MyMcDonald's Punkte sammeln & einlösen: Treueprogramm Guide 2026",
+    desc: "10 Punkte pro 1 € Umsatz sammeln und Gratis-Burger sichern: So funktioniert das MyMcDonald's Bonusprogramm in Deutschland mit allen Prämien-Stufen.",
+    keywords: "MyMcDonald's Punkte, McDonald's Bonusprogramm, Punkte einlösen Prämien, Gratis Burger McDonald's"
   },
   '/blog/mcdonalds-lieferservice-uber-eats-sparen/': {
-    title: "McDonald's Lieferservice Gutscheine: Mit Uber Eats & Code MCD2X10 20 € sparen",
-    desc: "Spare 2x 10 € auf deine ersten McDonald's Lieferungen über Uber Eats Deutschland mit dem exklusiven Gutscheincode MCD2X10."
+    title: "McDonald's Lieferservice Gutschein: 2x 10 € Uber Eats Code MCD2X10",
+    desc: "Spare 20 € (2x 10 € Rabatt) auf deine McDonald's Lieferung über Uber Eats Deutschland mit dem aktuellen Gutscheincode MCD2X10. Alle Bedingungen & Tipps.",
+    keywords: "McDonald's Lieferservice Gutschein, Uber Eats McDonald's Code MCD2X10, McDelivery Rabattcode Deutschland"
   },
   '/blog/mcdonalds-plu-codes-sparen/': {
-    title: "McDonald's PLU-Codes erklärt: So sparst du am Bestellterminal & McDrive",
-    desc: "Was bedeuten die 3-stelligen Kassen-PLUs? Erfahre, wie du Gutscheine blitzschnell am Easy Order Kiosk eintippst."
+    title: "McDonald's PLU-Codes Liste 2026: Geheimtrick fürs Bestellterminal & McDrive",
+    desc: "Wie funktionieren die 3-stelligen McDonald's PLU-Codes? Alle aktuellen Kassen-Codes für Big Mac, McNuggets & Menüs direkt am Easy-Order-Kiosk eingeben!",
+    keywords: "McDonald's PLU Codes Liste 2026, Bestellterminal Gutschein eingeben, 3-stellige Kassen Codes McDonald's, McDrive PLU Nummer"
   }
 };
 
-// Replace metadata in HTML string
+// Replace metadata in HTML string cleanly without duplicate tags
 function getHtmlForRoute(route, rawHtml) {
   const meta = pageMeta[route] || pageMeta['/'];
   const title = meta.title;
   const desc = meta.desc;
-  const canonicalUrl = `https://www.mcdonaldsgutscheine.de${route}`;
+  const keywords = meta.keywords || pageMeta['/'].keywords;
 
-  // Replace title tag
-  let html = rawHtml.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+  // Canonical consolidation for duplicate alias routes
+  let canonicalRoute = route;
+  if (route === '/datenschutz/' || route === '/privacy/') canonicalRoute = '/privacy-policy/';
+  if (route === '/kontakt/' || route === '/contact-us/') canonicalRoute = '/contact/';
+  if (route === '/ueber-uns/' || route === '/about/') canonicalRoute = '/about-us/';
+  if (route === '/imprint/') canonicalRoute = '/impressum/';
+  if (route === '/terms/') canonicalRoute = '/nutzungsbedingungen/';
 
-  // Build replacement metadata block
-  const metaTags = `
-    <meta name="description" content="${desc}" />
-    <meta name="keywords" content="McDonald's Gutscheine, Coupons, Rabatte, Fast Food Sparen, PLU-Codes, PDF Gutscheine, App-Gutscheine" />
-    <link rel="canonical" href="${canonicalUrl}" />`;
+  const canonicalUrl = `https://www.mcdonaldsgutscheine.de${canonicalRoute}`;
 
-  // Insert before </head>
-  html = html.replace('</head>', `${metaTags}\n  </head>`);
+  let html = rawHtml;
 
-  // Ensure language is set correctly (just in case)
-  html = html.replace('<html lang="en">', '<html lang="de">');
+  // Replace <title>
+  html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
+
+  // Replace <meta name="description">
+  html = html.replace(
+    /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/i,
+    `<meta name="description" content="${desc}" />`
+  );
+
+  // Replace <meta name="keywords">
+  html = html.replace(
+    /<meta\s+name="keywords"\s+content="[^"]*"\s*\/?>/i,
+    `<meta name="keywords" content="${keywords}" />`
+  );
+
+  // Replace canonical & hreflang URLs
+  html = html.replace(
+    /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i,
+    `<link rel="canonical" href="${canonicalUrl}" />`
+  );
+  html = html.replace(
+    /<link\s+rel="alternate"\s+hreflang="de-DE"\s+href="[^"]*"\s*\/?>/i,
+    `<link rel="alternate" hreflang="de-DE" href="${canonicalUrl}" />`
+  );
+  html = html.replace(
+    /<link\s+rel="alternate"\s+hreflang="de"\s+href="[^"]*"\s*\/?>/i,
+    `<link rel="alternate" hreflang="de" href="${canonicalUrl}" />`
+  );
+  html = html.replace(
+    /<link\s+rel="alternate"\s+hreflang="x-default"\s+href="[^"]*"\s*\/?>/i,
+    `<link rel="alternate" hreflang="x-default" href="${canonicalUrl}" />`
+  );
+
+  // Replace Open Graph tags
+  html = html.replace(
+    /<meta\s+property="og:url"\s+content="[^"]*"\s*\/?>/i,
+    `<meta property="og:url" content="${canonicalUrl}" />`
+  );
+  html = html.replace(
+    /<meta\s+property="og:title"\s+content="[^"]*"\s*\/?>/i,
+    `<meta property="og:title" content="${title}" />`
+  );
+  html = html.replace(
+    /<meta\s+property="og:description"\s+content="[^"]*"\s*\/?>/i,
+    `<meta property="og:description" content="${desc}" />`
+  );
+
+  // Replace Twitter tags
+  html = html.replace(
+    /<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/?>/i,
+    `<meta name="twitter:title" content="${title}" />`
+  );
+  html = html.replace(
+    /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/i,
+    `<meta name="twitter:description" content="${desc}" />`
+  );
+
+  // Ensure language is set to German
+  html = html.replace('<html lang="en">', '<html lang="de" dir="ltr">');
 
   return html;
 }
@@ -234,19 +318,45 @@ try {
   console.error('✗ Failed to generate dist/404.html:', error);
 }
 
-// 4. Generate dynamic sitemap.xml in dist/
+// 4. Generate dynamic sitemap.xml in dist/ (only canonical routes, no duplicate aliases)
+const canonicalRoutes = [
+  '/',
+  '/gutscheine/',
+  '/app-gutscheine/',
+  '/happy-meal-angebote/',
+  '/fruehstueck-angebote/',
+  '/burger-angebote/',
+  '/mccafe-angebote/',
+  '/angebote/',
+  '/gutscheine-pdf-download/',
+  '/blog/',
+  '/blog/mcdonalds-treueprogramm-erklaert/',
+  '/blog/mcdonalds-lieferservice-uber-eats-sparen/',
+  '/blog/mcdonalds-plu-codes-sparen/',
+  '/about-us/',
+  '/contact/',
+  '/privacy-policy/',
+  '/impressum/',
+  '/nutzungsbedingungen/',
+  '/haftungsausschluss/'
+];
+
 try {
+  const today = new Date().toISOString().split('T')[0];
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-  routes.forEach(route => {
+  canonicalRoutes.forEach(route => {
     const url = `https://www.mcdonaldsgutscheine.de${route}`;
     const isHome = route === '/';
-    const priority = isHome ? '1.0' : route.startsWith('/blog/') && route !== '/blog/' ? '0.8' : '0.7';
-    const changefreq = isHome ? 'daily' : 'weekly';
+    const isMoneyPage = ['/gutscheine/', '/app-gutscheine/', '/burger-angebote/', '/happy-meal-angebote/', '/gutscheine-pdf-download/', '/angebote/'].includes(route);
+    const isBlog = route.startsWith('/blog/');
+    const priority = isHome ? '1.0' : isMoneyPage ? '0.9' : isBlog ? '0.8' : '0.4';
+    const changefreq = isHome || isMoneyPage ? 'daily' : isBlog ? 'weekly' : 'monthly';
 
     xml += `  <url>\n`;
     xml += `    <loc>${url}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
     xml += `    <changefreq>${changefreq}</changefreq>\n`;
     xml += `    <priority>${priority}</priority>\n`;
     xml += `  </url>\n`;
@@ -255,7 +365,8 @@ try {
   xml += `</urlset>\n`;
   
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), xml, 'utf-8');
-  console.log('✓ Generated dynamic sitemap: dist/sitemap.xml');
+  fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), xml, 'utf-8');
+  console.log('✓ Generated dynamic sitemap: dist/sitemap.xml & public/sitemap.xml');
 } catch (error) {
   console.error('✗ Failed to generate sitemap.xml:', error);
 }

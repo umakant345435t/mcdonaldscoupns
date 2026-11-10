@@ -77,10 +77,10 @@ export default function Home({
               <span>Geprüft &amp; Gültig heute am {new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight">
-              McDonald Gutscheine & Coupons für <span className="text-yellow-400">Deutschland</span>
+              McDonald's Gutscheine &amp; Coupons 2026 für <span className="text-yellow-400">Deutschland</span>
             </h1>
             <p className="text-sm md:text-base text-red-50 leading-relaxed">
-              Finde alle aktuellen Rabattcoupons, wöchentliche App-Vorteile und clevere Bestell-Tricks des inoffiziellen McDonald’s Sparportals für maximales Sparen im Restaurant, am Terminal oder im McDrive.
+              Tagesaktuelle McDonald's Gutscheine, 3-stellige Kassen-PLU-Codes, Bonusbuch PDF-Download und exklusive MyMcDonald's App-Rabatte für maximales Sparen im Restaurant, am Bestellterminal, im McDrive oder per Lieferservice.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -295,11 +295,11 @@ export default function Home({
           <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 space-y-6">
             <div className="text-center">
               <HelpCircle className="h-8 w-8 text-red-500 mx-auto mb-2" />
-              <h2 className="text-lg md:text-xl font-black text-gray-900 tracking-tight uppercase">FAQ - WIR BEANTWORTEN DIE WICHTIGSTEN FRAGEN</h2>
-              <p className="text-xs text-gray-500 max-w-lg mx-auto mt-1">Hier finden Sie vernünftige Antworten auf Fragen bezüglich der Einlösebedingungen und der Gültigkeit im Schnellrestaurant.</p>
+              <h2 className="text-lg md:text-xl font-black text-gray-900 tracking-tight uppercase">FAQ – Häufige Fragen zu McDonald's Gutscheinen in Deutschland</h2>
+              <p className="text-xs text-gray-500 max-w-lg mx-auto mt-1">Alle wichtigen Antworten zu Gültigkeit, PLU-Codes am Bestellterminal, PDF-Coupons und Einlösebedingungen.</p>
             </div>
             <div className="division-y divide-gray-100 space-y-4">
-              {FAQS.slice(0, 4).map((faq, index) => (
+              {FAQS.map((faq, index) => (
                 <div key={index} className="pt-2 first:pt-0">
                   <h4 className="font-bold text-xs sm:text-sm text-gray-800 leading-snug flex items-center gap-1.5 p-1 rounded-sm">
                     <span className="text-red-600 font-mono">Q:</span>
@@ -312,6 +312,71 @@ export default function Home({
               ))}
             </div>
           </div>
+
+          {/* Comprehensive German SEO Authority Section for High Google.de Ranking */}
+          <section className="bg-white rounded-2xl border border-gray-150 p-6 md:p-8 space-y-6 text-xs text-gray-600 leading-relaxed shadow-xs">
+            <div className="space-y-2 border-b border-gray-100 pb-4">
+              <span className="inline-block bg-red-50 text-red-700 font-black text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider">
+                Ratgeber &amp; Preisvergleich 2026
+              </span>
+              <h2 className="text-lg md:text-xl font-black text-gray-900 tracking-tight">
+                McDonald's Gutscheine, PLU-Codes &amp; Rabatte in Deutschland optimal nutzen
+              </h2>
+              <p className="text-gray-500">
+                So sicherst du dir bei jeder Bestellung im Restaurant, am Easy-Order-Kiosk, im McDrive oder per Lieferservice den besten Preis in Deutschland.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <h3 className="font-bold text-gray-900 text-sm">
+                  1. McDonald's Gutscheine zum Ausdrucken (PDF) vs. App-Coupons
+                </h3>
+                <p>
+                  Sowohl die klassischen <strong>McDonald's Papier-Gutscheine (Bonusbuch PDF)</strong> als auch die digitalen Coupons in der <strong>MyMcDonald's App</strong> bieten Preisnachlässe von bis zu 50 % gegenüber dem regulären Einzelkauf. Während das PDF-Couponheft ganz ohne Registrierung funktioniert, sammelst du über die App zusätzlich 10 Treuepunkte pro 1 € Umsatz für Gratis-Prämien wie Big Mac, McFlurry oder 6er Chicken McNuggets.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="font-bold text-gray-900 text-sm">
+                  2. Dreistellige Kassen-PLU-Codes am Bestellterminal &amp; McDrive
+                </h3>
+                <p>
+                  Jeder offizielle McDonald's Coupon in Deutschland besitzt einen kurzen, meist 3-stelligen <strong>PLU-Code (Price Look-Up Nummer)</strong> oder Aktionscode. Am digitalen Bestellterminal im Restaurant kannst du diesen Code direkt über die Bildschirmtastatur eintippen. Im <strong>McDrive</strong> genügt es, die PLU-Nummer oder die Bezeichnung des Gutscheins direkt an der Bestellsäule durchzugeben.
+                </p>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-gray-100 space-y-3">
+              <h3 className="font-bold text-gray-900 text-xs uppercase tracking-wider">
+                Beliebte Gutschein-Kategorien &amp; Suchbegriffe in Deutschland:
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: "Alle McDonald's Gutscheine 2026", path: '/gutscheine/' },
+                  { label: "Bonusbuch PDF Download", path: '/gutscheine-pdf-download/' },
+                  { label: "Big Mac & Burger 2-für-1 Coupons", path: '/burger-angebote/' },
+                  { label: "MyMcDonald's App Rabatte", path: '/app-gutscheine/' },
+                  { label: "Happy Meal Familien-Gutscheine", path: '/happy-meal-angebote/' },
+                  { label: "McDonald's Frühstück Coupons", path: '/fruehstueck-angebote/' },
+                  { label: "McCafé & McFlurry Angebote", path: '/mccafe-angebote/' },
+                  { label: "Uber Eats 20€ Code MCD2X10", path: '/blog/mcdonalds-lieferservice-uber-eats-sparen/' },
+                  { label: "PLU-Codes Liste Kiosk", path: '/blog/mcdonalds-plu-codes-sparen/' }
+                ].map((tag, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setPath(tag.path)}
+                    className="px-3 py-1.5 bg-gray-100 hover:bg-red-50 hover:text-red-700 text-gray-700 rounded-lg text-[11px] font-semibold transition-colors cursor-pointer"
+                  >
+                    {tag.label}
+                  </button>
+                ))}
+              </div>
+              <p className="text-[11px] text-gray-400 pt-1">
+                Bundesweit einlösbar in teilnehmenden Filialen – u. a. in Berlin, Hamburg, München, Köln, Frankfurt am Main, Stuttgart, Düsseldorf, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg.
+              </p>
+            </div>
+          </section>
 
         </div>
 

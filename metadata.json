@@ -1,6 +1,6 @@
 {
   "name": "McDonalds Gutscheine Sparportal",
-  "description": "Vollständiges, inoffizielles McDonald's Sparportal mit aktuellen Gutscheinen, App-Coupons, Rechner, Blog und Leitfäden zum Sparen in Deutschland.",
+  "description": "Tagesaktuelle McDonald's Gutscheine & Coupons 2026 für Deutschland. Spare bis zu 50% mit Kassen-PLU-Codes, Bonusbuch PDF-Download, MyMcDonald's App & 20€ Uber Eats Code MCD2X10!",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

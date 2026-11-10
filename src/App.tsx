@@ -75,40 +75,47 @@ export default function App() {
     }
   }, [currentPath]);
 
-  // Dynamic SEO Page Meta title & Canonical write
+  // Dynamic SEO Page Meta title, Description, OpenGraph & Canonical write
   useEffect(() => {
-    let title = "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote Deutschland";
-    let desc = "Tagesaktuelle McDonald's Gutscheine, Coupons und Angebote für Deutschland. Spare bei Burgern, Menüs, McFlurry & mit Uber Eats Liefercode MCD2X10.";
+    let title = "McDonald's Gutscheine 2026 – Aktuelle Coupons, PLU-Codes & PDF Deutschland";
+    let desc = "Tagesaktuelle McDonald's Gutscheine & Coupons 2026 für Deutschland. Spare bis zu 50% mit Kassen-PLU-Codes, Bonusbuch PDF-Download, MyMcDonald's App & 20€ Uber Eats Code MCD2X10!";
 
     const norm = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
 
     if (norm === '/' || norm === '/index.html/') {
-      title = "McDonald's Gutscheine 2026 – Aktuelle Coupons & Angebote Deutschland";
-      desc = "Finde aktuelle McDonald's Gutscheine, Coupons und Angebote für Deutschland. Spare bei Burgern, Menüs, McFlurry und mit Uber Eats Code MCD2X10.";
+      title = "McDonald's Gutscheine 2026 – Aktuelle Coupons, PLU-Codes & PDF Deutschland";
+      desc = "Tagesaktuelle McDonald's Gutscheine & Coupons 2026 für Deutschland. Spare bis zu 50% mit Kassen-PLU-Codes, Bonusbuch PDF-Download, MyMcDonald's App & 20€ Uber Eats Code MCD2X10!";
     } else if (norm === '/gutscheine/') {
-      title = "McDonald's Gutscheine 2026 – Alle Coupons & Sparcodes";
-      desc = "Vollständige Übersicht aller einlösbaren McDonald's Gutscheincodes und Kassen-PLUs in Deutschland.";
+      title = "McDonald's Gutscheine 2026 – Alle aktuellen Coupons & PLU-Codes Liste";
+      desc = "Vollständige Liste aller einlösbaren McDonald's Gutscheincodes & 3-stelligen Kassen-PLUs 2026 in Deutschland. Direkt am Bestellterminal, McDrive oder an der Kasse sparen!";
     } else if (norm === '/app-gutscheine/') {
-      title = "McDonald's App Coupons – Exklusive Smartphone-Rabatte";
-      desc = "Spare bis zu 50% mit exklusiven App-Coupons und unserem MyMcDonald's Treuepunkte Guide.";
+      title = "McDonald's App Gutscheine 2026 – Exklusive MyMcDonald's Coupons & Punkte";
+      desc = "Spare bis zu 50% mit exklusiven McDonald's App-Gutscheinen, QR-Codes und unserem MyMcDonald's Bonusprogramm Guide für Gratis-Prämien in Deutschland.";
     } else if (norm === '/happy-meal-angebote/') {
-      title = "Happy Meal Angebote & Spielzeuge – Familientarife";
-      desc = "Entdecke das Happy Meal mit günstigen Kombi-Vorteilen und Preisnachlässen für Familien.";
+      title = "McDonald's Happy Meal Gutscheine 2026 – Familien-Coupons & Spielzeug";
+      desc = "Aktuelle McDonald's Happy Meal Gutscheine & Familien-Angebote 2026 in Deutschland. Spare mit Kombi-Coupons inklusive Hauptspeise, Beilage, Getränk und Spielzeug oder Buch.";
     } else if (norm === '/burger-angebote/') {
-      title = "McDonald's Burger Angebote & Coupons im Einzelkauf";
-      desc = "Spare bei Big Mac, Double Cheeseburger, Royal Käse und weiteren Klassikern.";
+      title = "McDonald's Burger Gutscheine 2026 – Big Mac, Royal TS & 2-für-1 Coupons";
+      desc = "Spare bei Big Mac, Hamburger Royal TS, Double Cheeseburger, McChicken und 20er Chicken McNuggets mit aktuellen 2-für-1 Burger Gutscheinen & McMenü Coupons.";
     } else if (norm === '/fruehstueck-angebote/') {
-      title = "McDonald's Frühstück Angebote (Morgen-Gutscheine)";
-      desc = "Günstige Heißgetränke und McMuffins vor 10:30 Uhr einlösen.";
+      title = "McDonald's Frühstück Gutscheine 2026 – McMuffin & Kaffee Coupons";
+      desc = "Günstige McDonald's Frühstück Gutscheine vor 10:30 Uhr: Spare bei McMuffin Bacon & Egg, Rührei, Croissants und Café-Spezialitäten in allen teilnehmenden Filialen.";
     } else if (norm === '/mccafe-angebote/') {
-      title = "McCafé Angebote, Kuchen & Heißgetränke Gutscheine";
-      desc = "Kombipreise für Muffins, Cookies, Donuts und aromatischen Café Latte Macchiato.";
+      title = "McCafé Gutscheine 2026 – Kaffee, Kuchen, McFlurry & Dessert Coupons";
+      desc = "Aktuelle McCafé Gutscheine & Dessert-Coupons für Deutschland: Kombipreise für Latte Macchiato, Cappuccino, Muffins, Cookies, Donuts und McFlurry.";
     } else if (norm === '/angebote/') {
-      title = "McDonald's Angebote & Rabattaktionen diese Woche";
-      desc = "Wöchentliche Sonderaktionen, Ostercodes und Rabattpyramiden.";
+      title = "McDonald's Angebote diese Woche – Aktuelle Aktionen & Rabatte 2026";
+      desc = "Alle McDonald's Angebote dieser Woche im Überblick: Saisonale Sonderaktionen, McSmart Menü Deals, Oster- & Sommer-Coupons sowie Lieferservice-Rabatte.";
     } else if (norm.startsWith('/blog/')) {
-      title = "Sparportal Blog – Expertenratgeber für McDonald's Deutschland";
-      desc = "Lese echte Praxistests und nützliche Hacks, um bei der McDonald's Bestellung Geld zu sparen.";
+      const slug = norm.replace('/blog/', '').replace(/\/$/, '');
+      const matchedPost = BlogPosts.find(p => p.slug === slug);
+      if (matchedPost) {
+        title = `${matchedPost.title} – McDonald's Sparportal`;
+        desc = matchedPost.summary;
+      } else {
+        title = "McDonald's Spar-Ratgeber & Insider-Tricks – Blog Deutschland";
+        desc = "Echte Praxistests, PLU-Code-Listen, Kassenbon-Tricks und Schritt-für-Schritt-Anleitungen zum Sparen bei McDonald's in Deutschland.";
+      }
     } else if (norm === '/about-us/' || norm === '/ueber-uns/' || norm === '/about/') {
       title = "Über Uns – mcdonaldsgutscheine.de";
       desc = "Über mcdonaldsgutscheine.de: Unabhängiges Verbraucherportal und Spartipps für McDonald's Deutschland.";
@@ -122,8 +129,8 @@ export default function App() {
       title = "Datenschutzerklärung – mcdonaldsgutscheine.de";
       desc = "Ausführliche Datenschutzerklärung (DSGVO & Google AdSense Programm-Richtlinien) für unser Sparportal.";
     } else if (norm === '/gutscheine-pdf-download/') {
-      title = "McDonald's Gutscheine PDF-Download & Bonusbuch 2026";
-      desc = "Lade das offizielle McDonald's Bonusbuch & Coupon-Heft 2026 (A4 PDF) herunter und spare offline!";
+      title = "McDonald's Gutscheine PDF Download 2026 – Bonusbuch zum Ausdrucken";
+      desc = "Lade das aktuelle McDonald's Bonusbuch & Coupon-Heft 2026 kostenlos als DIN-A4 PDF herunter. Alle Gutscheine & PLU-Codes zum Ausdrucken oder fürs Smartphone!";
     }
 
     document.title = title;
@@ -139,10 +146,13 @@ export default function App() {
 
     // Compute canonical path
     let canonicalPath = norm;
-    if (norm === '/datenschutz/' || norm === '/privacy/') canonicalPath = '/privacy-policy/';
+    if (norm === '/datenschutz/' || norm === '/privacy/' || norm === '/cookies/') canonicalPath = '/privacy-policy/';
     if (norm === '/kontakt/' || norm === '/contact-us/') canonicalPath = '/contact/';
     if (norm === '/ueber-uns/' || norm === '/about/') canonicalPath = '/about-us/';
     if (norm === '/imprint/') canonicalPath = '/impressum/';
+    if (norm === '/terms/') canonicalPath = '/nutzungsbedingungen/';
+
+    const fullCanonicalUrl = `https://www.mcdonaldsgutscheine.de${canonicalPath}`;
 
     // Inject or update canonical link
     let canonical = document.querySelector('link[rel="canonical"]');
@@ -151,7 +161,19 @@ export default function App() {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', `https://www.mcdonaldsgutscheine.de${canonicalPath}`);
+    canonical.setAttribute('href', fullCanonicalUrl);
+
+    // Sync OpenGraph & Twitter titles/descriptions dynamically
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', desc);
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', fullCanonicalUrl);
+    const twTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twTitle) twTitle.setAttribute('content', title);
+    const twDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twDesc) twDesc.setAttribute('content', desc);
   }, [currentPath]);
 
   // Shopping cart helper logic for Calculator tray
