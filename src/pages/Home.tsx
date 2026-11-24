@@ -373,7 +373,16 @@ export default function Home({
                 ))}
               </div>
               <p className="text-[11px] text-gray-400 pt-1">
-                Bundesweit einlösbar in teilnehmenden Filialen – u. a. in Berlin, Hamburg, München, Köln, Frankfurt am Main, Stuttgart, Düsseldorf, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg.
+                Bundesweit einlösbar in teilnehmenden Filialen – u. a. in Berlin, Hamburg, München, Köln, Frankfurt am Main, Stuttgart, Düsseldorf, Leipzig, Dortmund, Essen, Bremen, Dresden, Hannover und Nürnberg. Weitere hilfreiche Online-Übersichten und Infos findest du auch bei{' '}
+                <a
+                  href="https://mingkey.wiki/"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-red-600 hover:underline font-semibold"
+                >
+                  밍키 넷
+                </a>
+                .
               </p>
             </div>
           </section>

@@ -88,6 +88,17 @@ export default function Footer({ setPath, currentPath }: FooterProps) {
             <p className="text-[11px] text-gray-400">
               Unsere Redaktion prüft Gutscheincodes regelmäßig vor Ort. Hinweise zu abgelaufenen Aktionen oder neuen Kassen-PLUs nehmen wir gerne per E-Mail an <a href="mailto:kontakt@mcdonaldsgutscheine.de" className="text-yellow-400 hover:underline">kontakt@mcdonaldsgutscheine.de</a> entgegen.
             </p>
+            <p className="text-[11px] text-gray-400 pt-1">
+              Empfohlene Ressourcen &amp; Partner:{' '}
+              <a
+                href="https://mingkey.wiki/"
+                target="_blank"
+                rel="noopener"
+                className="text-yellow-400 hover:underline font-semibold"
+              >
+                밍키 넷
+              </a>
+            </p>
           </div>
         </div>
       </div>
